@@ -173,6 +173,32 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   display: block;
 }
 
+/* Field photography */
+.field-photo {
+  margin: 0 0 16px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.field-photo img {
+  width: 100%;
+  display: block;
+}
+.field-photo figcaption {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding: 8px 2px 0;
+}
+
+.header-photo {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 28px;
+  display: block;
+}
+
 /* Icon column */
 .icon-row {
   display: flex;
