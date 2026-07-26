@@ -1,16 +1,23 @@
 /* Arpit Gaind — site stylesheet
-   Palette: monotone base + single accent color.
+   Palette: warm off-white + charcoal + single accent color.
+   Typography: Jost (geometric sans, headings/UI) + Lora (warm serif, body) — free
+   equivalents to the paid Futura PT / Calluna pairing this palette was inspired by.
    Accent is a CSS variable — change --accent below to retheme the entire site. */
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
 :root {
-  --bg: #fafaf8;
-  --ink: #1a1a1a;
-  --ink-soft: #4a4a4a;
-  --line: #e0e0dc;
-  --accent: #a4502f; /* placeholder terracotta accent — swap this one value to retheme */
+  --bg: #f6f3ef;
+  --ink: #1e1c1a;
+  --ink-soft: #6b6560;
+  --line: #e3ddd5;
+  --warm-grey: #eae6e0;
+  --dark: #262422;
+  --dark-soft: #b8b2ab;
+  --accent: #a4502f; /* single accent color — swap this one value to retheme */
   --max-width: 780px;
-  --font-body: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-body: 'Lora', Georgia, 'Iowan Old Style', serif;
+  --font-ui: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -41,8 +48,8 @@ a:hover { border-bottom-color: currentColor; }
 
 /* Header / nav */
 header.site-header {
-  border-bottom: 1px solid var(--line);
-  padding: 28px 0;
+  background: var(--dark);
+  padding: 22px 0;
 }
 header.site-header .wrap {
   display: flex;
@@ -54,30 +61,44 @@ header.site-header .wrap {
 }
 .site-title {
   font-family: var(--font-ui);
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 0.02em;
-  color: var(--ink);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-bottom: none;
+  display: inline-flex;
+  align-items: center;
 }
+.site-title .divider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: var(--dark-soft);
+  margin: 0 8px;
+}
+.site-title:hover { color: #fff; opacity: 0.85; }
+
 nav.site-nav {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 13px;
 }
 nav.site-nav ul {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 24px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
 }
 nav.site-nav a {
-  color: var(--ink-soft);
+  color: var(--dark-soft);
   border-bottom: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 nav.site-nav a:hover,
 nav.site-nav a[aria-current="page"] {
-  color: var(--accent);
+  color: #fff;
 }
 
 nav.site-nav li.has-dropdown {
@@ -94,10 +115,10 @@ nav.site-nav .dropdown {
   margin: 0;
   padding: 6px 0;
   min-width: 200px;
-  background: var(--bg);
-  border: 1px solid var(--line);
+  background: var(--dark);
+  border: 1px solid #3a3733;
   border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   z-index: 20;
 }
 nav.site-nav li.has-dropdown:hover .dropdown,
@@ -109,10 +130,12 @@ nav.site-nav .dropdown a {
   display: block;
   padding: 8px 16px;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 nav.site-nav .dropdown a:hover {
-  background: #f2f2ee;
+  background: #322f2b;
 }
 
 main {
@@ -147,6 +170,66 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   border-radius: 4px;
   margin: 8px 0 24px;
   display: inline-block;
+}
+
+/* Split hero — homepage only */
+.split-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.split-hero-photo {
+  background: var(--dark);
+  min-height: 480px;
+  overflow: hidden;
+}
+.split-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+}
+.split-hero-text {
+  background: var(--dark);
+  color: var(--dark-soft);
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-hero-text h1 {
+  font-family: var(--font-ui);
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+.split-hero-text .tagline {
+  color: #fff;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 19px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+.split-hero-text p.intro-lede {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+.split-hero-text p.intro-lede strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .split-hero {
+    grid-template-columns: 1fr;
+  }
+  .split-hero-photo { min-height: 320px; }
+  .split-hero-text { padding: 40px 28px; }
 }
 
 /* Hero photo placeholder on homepage */
@@ -280,7 +363,7 @@ ul.plain li { margin-bottom: 8px; }
   font-family: var(--font-ui);
   color: var(--ink-soft);
   margin-bottom: 8px;
-  background: #f2f2ee;
+  background: var(--warm-grey);
 }
 
 .video-embed {
@@ -305,7 +388,7 @@ ul.plain li { margin-bottom: 8px; }
   font-family: var(--font-ui);
   font-size: 13px;
   color: var(--ink-soft);
-  background: #f2f2ee;
+  background: var(--warm-grey);
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 10px 16px;
