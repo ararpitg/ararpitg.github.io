@@ -49,21 +49,20 @@ a:hover { border-bottom-color: currentColor; }
 /* Header / nav */
 header.site-header {
   background: var(--dark);
-  padding: 22px 0;
+  padding: 28px 0 22px;
 }
 header.site-header .wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap: 18px;
   max-width: 920px;
 }
 .site-title {
   font-family: var(--font-ui);
   font-weight: 500;
-  font-size: 22px;
-  letter-spacing: 0.04em;
+  font-size: 26px;
+  letter-spacing: 0.08em;
   color: #fff;
   border-bottom: none;
   display: inline-flex;
@@ -85,7 +84,8 @@ nav.site-nav {
 nav.site-nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 28px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -172,64 +172,58 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   display: inline-block;
 }
 
-/* Split hero — homepage only */
-.split-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.split-hero-photo {
-  background: var(--dark);
-  min-height: 480px;
+/* Cover hero — homepage only, full-width banner like ayonadatta.com */
+.cover-hero {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
+  background: var(--dark);
 }
-.split-hero-photo img {
+.cover-hero img {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  opacity: 0.92;
+  object-position: center 55%;
+  opacity: 0.55;
 }
-.split-hero-text {
-  background: var(--dark);
-  color: var(--dark-soft);
-  padding: 64px 56px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.cover-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(38,36,34,0.55) 0%, rgba(38,36,34,0.75) 100%);
 }
-.split-hero-text h1 {
+.cover-hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+}
+.cover-hero-text h1 {
   font-family: var(--font-ui);
   color: #fff;
-  font-size: 30px;
-  letter-spacing: 0.06em;
+  font-size: 44px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 500;
-  margin: 0 0 20px;
+  margin: 0 0 14px;
 }
-.split-hero-text .tagline {
-  color: #fff;
-  font-family: var(--font-body);
-  font-style: italic;
-  font-size: 19px;
-  margin: 0 0 24px;
-  line-height: 1.5;
-}
-.split-hero-text p.intro-lede {
-  font-size: 17px;
-  line-height: 1.7;
+.cover-hero-text .tagline {
+  color: var(--dark-soft);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   margin: 0;
-}
-.split-hero-text p.intro-lede strong {
-  color: #fff;
-  font-weight: 500;
 }
 
 @media (max-width: 760px) {
-  .split-hero {
-    grid-template-columns: 1fr;
-  }
-  .split-hero-photo { min-height: 320px; }
-  .split-hero-text { padding: 40px 28px; }
+  .cover-hero { min-height: 340px; }
+  .cover-hero-text h1 { font-size: 30px; }
 }
 
 /* Hero photo placeholder on homepage */
