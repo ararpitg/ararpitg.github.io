@@ -62,6 +62,7 @@ header.site-header .wrap {
   font-family: var(--font-ui);
   font-weight: 500;
   font-size: 26px;
+  line-height: 1;
   letter-spacing: 0.08em;
   color: #fff;
   border-bottom: none;
@@ -70,8 +71,9 @@ header.site-header .wrap {
 }
 .site-title .divider {
   display: inline-block;
+  align-self: center;
   width: 1px;
-  height: 18px;
+  height: 34px;
   background: var(--dark-soft);
   margin: 0 8px;
 }
@@ -280,6 +282,39 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
 .btn-light:hover { background: #fff; color: var(--dark); }
 .btn-dark { color: var(--ink); }
 .btn-dark:hover { background: var(--ink); color: var(--bg); }
+
+/* Awards & Recognitions */
+.award-featured {
+  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+.award-featured .eyebrow {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.award-featured h3 { margin: 0 0 4px; }
+ul.awards-list { list-style: none; padding: 0; margin: 0; }
+ul.awards-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+ul.awards-list li .award-amount {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
 
 @media (max-width: 760px) {
   .split-hero { grid-template-columns: 1fr; }
