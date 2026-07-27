@@ -1,5 +1,5 @@
 /* Arpit Gaind — site stylesheet
-   Palette: warm off-white + charcoal + single accent color.
+   Palette: wheat / sea-salt / black / grey — deliberately no true white anywhere.
    Typography: Jost (geometric sans, headings/UI) + Lora (warm serif, body) — free
    equivalents to the paid Futura PT / Calluna pairing this palette was inspired by.
    Accent is a CSS variable — change --accent below to retheme the entire site. */
@@ -7,13 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
-  --bg: #f6f3ef;
-  --ink: #1e1c1a;
-  --ink-soft: #6b6560;
-  --line: #e3ddd5;
-  --warm-grey: #eae6e0;
+  --bg: #ddd2bd;         /* wheat/sea-salt base — replaces the old near-white */
+  --ink: #262422;        /* warm near-black, matches --dark below */
+  --ink-soft: #5c5346;
+  --line: #c7baa0;
+  --warm-grey: #cfc3ab;
   --dark: #262422;
   --dark-soft: #b8b2ab;
+  --off-white: #ece5d6;  /* the lightest tone on the site — used sparingly for text on dark, never as a page bg */
   --accent: #a4502f; /* single accent color — swap this one value to retheme */
   --max-width: 780px;
   --font-body: 'Lora', Georgia, 'Iowan Old Style', serif;
@@ -279,7 +280,7 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   border-bottom: 1px solid currentColor !important;
 }
 .btn-light { color: #fff; }
-.btn-light:hover { background: #fff; color: var(--dark); }
+.btn-light:hover { background: var(--off-white); color: var(--dark); }
 .btn-dark { color: var(--ink); }
 .btn-dark:hover { background: var(--ink); color: var(--bg); }
 
