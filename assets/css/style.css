@@ -187,8 +187,9 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   display: inline-block;
 }
 
-/* Name + tagline — sits at the top of the split-hero text column, flush with the bio text */
+/* Name + tagline — sits at the top of the split-hero text column, centered as its own block */
 .split-hero-name {
+  text-align: center;
   margin-bottom: 28px;
 }
 .split-hero-name h1 {
