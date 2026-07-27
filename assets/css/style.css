@@ -187,38 +187,13 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   display: inline-block;
 }
 
-/* Cover hero — homepage only, full-width banner like ayonadatta.com */
-.cover-hero {
-  position: relative;
-  min-height: 460px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
+/* Name band — homepage only, solid background, no photo behind the text */
+.hero-name-band {
   background: var(--dark);
+  text-align: center;
+  padding: 40px 24px 32px;
 }
-.cover-hero img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  opacity: 0.75;
-}
-.cover-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(38,36,34,0.55) 0%, rgba(38,36,34,0.75) 100%);
-}
-.cover-hero-text {
-  position: relative;
-  z-index: 1;
-  padding: 24px;
-}
-.cover-hero-text h1 {
+.hero-name-band h1 {
   font-family: var(--font-ui);
   color: #fff;
   font-size: 44px;
@@ -227,13 +202,34 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   font-weight: 500;
   margin: 0 0 14px;
 }
-.cover-hero-text .tagline {
+.hero-name-band .tagline {
   color: var(--dark-soft);
   font-family: var(--font-ui);
   font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0;
+}
+
+/* Cover slideshow — homepage only, auto-rotating field photography, no text overlay */
+.cover-slideshow {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  background: var(--dark);
+}
+.cover-slideshow img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.cover-slideshow img.active {
+  opacity: 1;
 }
 
 /* Photo + intro panel — homepage, below the cover banner */
@@ -336,8 +332,9 @@ ul.awards-list li .award-amount {
 }
 
 @media (max-width: 760px) {
-  .cover-hero { min-height: 340px; }
-  .cover-hero-text h1 { font-size: 30px; }
+  .cover-slideshow { min-height: 300px; }
+  .hero-name-band h1 { font-size: 30px; }
+  .hero-name-band { padding: 32px 20px 26px; }
 }
 
 /* Hero photo placeholder on homepage */
@@ -590,15 +587,14 @@ footer.site-footer {
 .back-to-top:hover { background: var(--accent); }
 
 /* Hover zoom on photography */
-.field-photo, .split-hero-photo, .cover-hero, .header-photo-wrap {
+.field-photo, .split-hero-photo, .header-photo-wrap {
   overflow: hidden;
 }
-.field-photo img, .split-hero-photo img, .cover-hero img, .header-photo-wrap img {
+.field-photo img, .split-hero-photo img, .header-photo-wrap img {
   transition: transform 0.6s ease;
 }
 .field-photo:hover img,
 .split-hero-photo:hover img,
-.cover-hero:hover img,
 .header-photo-wrap:hover img {
   transform: scale(1.045);
 }

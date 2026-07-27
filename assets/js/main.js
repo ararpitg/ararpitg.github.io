@@ -19,7 +19,7 @@
   var revealTargets = document.querySelectorAll(
     "main .wrap > h1, main .wrap > h2, main .wrap > h3, main .wrap > p, " +
     "main .wrap > div, main .wrap > ul, main .wrap > figure, " +
-    ".split-hero, .cover-hero-text, .award-featured"
+    ".split-hero, .hero-name-band, .award-featured"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -105,6 +105,20 @@
       btn.innerHTML = (expanded ? showText : hideText) + ' <span class="arrow">&darr;</span>';
     });
   });
+
+  /* ---------- Homepage cover slideshow ---------- */
+  var slideshow = document.querySelector(".cover-slideshow");
+  if (slideshow) {
+    var slides = Array.prototype.slice.call(slideshow.querySelectorAll("img"));
+    if (slides.length > 1 && !reduceMotion) {
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 5000);
+    }
+  }
 
   /* ---------- In-page section nav (scrollspy) ---------- */
   var pageNav = document.querySelector("nav.page-nav");
