@@ -10,13 +10,27 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="site-title" aria-label="Arpit Gaind">A<span class="divider">|</span>G</a>
+    <a href="index.html" class="site-title" aria-label="Arpit Gaind">A<span class="divider"></span>G</a>
     <nav class="site-nav">
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="awards.html" aria-current="page">Awards</a></li>
+        <li class="has-dropdown"><a href="research.html">Research</a>
+          <ul class="dropdown">
+            <li><a href="research.html#overview">Overview</a></li>
+            <li><a href="research.html#dissertation">Dissertation</a></li>
+            <li><a href="research.html#publications">Publications</a></li>
+            <li><a href="research.html#conferences">Conferences</a></li>
+            <li><a href="research.html#cv">CV</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="awards.html" aria-current="page">Awards</a>
+          <ul class="dropdown">
+            <li><a href="awards.html#featured">Featured</a></li>
+            <li><a href="awards.html#external">External &amp; International</a></li>
+            <li><a href="awards.html#university">University &mdash; UCLA</a></li>
+          </ul>
+        </li>
         <li class="has-dropdown">
           <a href="media.html">Media Work</a>
           <ul class="dropdown">
@@ -35,13 +49,21 @@
 
     <h1>Awards &amp; Recognitions</h1>
 
-    <div class="award-featured">
+    <nav class="page-nav" aria-label="On this page">
+      <ul>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#external">External &amp; International</a></li>
+        <li><a href="#university">University &mdash; UCLA</a></li>
+      </ul>
+    </nav>
+
+    <div class="award-featured" id="featured">
       <div class="eyebrow">Newly Awarded</div>
       <h3>American Institute of Indian Studies (AIIS) Fellowship</h3>
       <p style="margin: 0;">2026&ndash;27 &middot; $7,000</p>
     </div>
 
-    <h2>External &amp; International</h2>
+    <h2 id="external">External &amp; International</h2>
     <ul class="awards-list">
       <li><span>Charlotte Williams Scholarship</span> <span class="award-amount">2026&ndash;27 &middot; $8,300</span></li>
       <li><span>Association for Asian Studies (AAS) Travel Grant, Vancouver</span> <span class="award-amount">2026 &middot; $500</span></li>
@@ -53,7 +75,7 @@
       <li><span>Emerging Scholar Award, The Image Conference, Hong Kong</span> <span class="award-amount">2018 &middot; stay &amp; registration</span></li>
     </ul>
 
-    <h2>University Level &mdash; UCLA</h2>
+    <h2 id="university">University Level &mdash; UCLA</h2>
     <ul class="awards-list">
       <li><span>Collegium of University Teaching Fellows (CUTF) Fellowship</span> <span class="award-amount">2026&ndash;27 &middot; $18,000</span></li>
       <li><span>UCLA Graduate Leadership Academy, Inaugural Cohort</span> <span class="award-amount">2026 &middot; non-monetary</span></li>
