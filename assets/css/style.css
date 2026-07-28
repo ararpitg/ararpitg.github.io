@@ -187,24 +187,37 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   display: inline-block;
 }
 
-/* Name + tagline — sits at the top of the split-hero text column, centered as its own block */
-.split-hero-name {
+/* Name banner — homepage only, full-width abstract background with name + tagline */
+.name-banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  padding: 90px 24px;
   text-align: center;
-  margin-bottom: 28px;
 }
-.split-hero-name h1 {
+.name-banner-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.name-banner-text {
+  position: relative;
+  z-index: 1;
+}
+.name-banner-text h1 {
   font-family: var(--font-ui);
-  color: #fff;
-  font-size: 34px;
+  color: var(--ink);
+  font-size: 40px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
-.split-hero-name .tagline {
-  color: var(--dark-soft);
+.name-banner-text .tagline {
+  color: var(--ink-soft);
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   margin: 0;
@@ -281,6 +294,16 @@ h3 { font-size: 17px; margin: 24px 0 6px; }
   max-width: 480px;
 }
 .bio-box p:last-child { margin-bottom: 0; }
+.bio-box a {
+  color: var(--dark-soft);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.bio-box a:hover { color: #fff; border-bottom-color: #fff; }
 
 /* Get in Touch — repeated CTA button, dark and light variants */
 .btn {
@@ -340,7 +363,8 @@ ul.awards-list li .award-amount {
 
 @media (max-width: 760px) {
   .cover-banner { min-height: 300px; }
-  .split-hero-name h1 { font-size: 26px; }
+  .name-banner { padding: 60px 20px; }
+  .name-banner-text h1 { font-size: 28px; }
 }
 
 /* Hero photo placeholder on homepage */
@@ -541,13 +565,65 @@ nav.project-nav a[aria-current="page"] {
 }
 
 footer.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 24px 0;
-  font-family: var(--font-ui);
-  font-size: 13px;
-  color: var(--ink-soft);
+  background: var(--dark);
+  padding: 48px 0 40px;
   text-align: center;
 }
+.footer-logo {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  border-bottom: none;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-logo:hover { color: #fff; opacity: 0.85; }
+.footer-logo .divider {
+  display: inline-block;
+  width: 1px;
+  height: 26px;
+  background: var(--dark-soft);
+  margin: 0 8px;
+}
+.footer-nav {
+  margin: 22px 0 0;
+  font-family: var(--font-ui);
+  font-size: 12px;
+}
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav a {
+  color: var(--dark-soft);
+  border-bottom: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.footer-nav a:hover { color: #fff; }
+.footer-nav li[aria-hidden] { color: #4a4642; }
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 26px;
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--dark-soft);
+  transition: fill 0.2s ease;
+}
+.footer-social a:hover svg { fill: #fff; }
 
 @media (max-width: 560px) {
   h1 { font-size: 26px; }
