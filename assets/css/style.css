@@ -302,11 +302,14 @@ h4 { font-size: 15px; margin: 16px 0 4px; }
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2px 5px;
+  border-radius: 3px;
 }
-.bio-box a:hover { color: #fff; border-bottom-color: #fff; }
+.bio-box a:hover { color: #fff; background: rgba(255, 255, 255, 0.16); border-bottom-color: #fff; }
 
-/* Get in Touch — repeated CTA button, dark and light variants */
+/* Get in Touch — repeated CTA button, solid fill on every background */
 .btn {
   display: inline-block;
   font-family: var(--font-ui);
@@ -314,14 +317,12 @@ h4 { font-size: 15px; margin: 16px 0 4px; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 12px 28px;
-  border: 1px solid currentColor;
+  background: var(--dark);
+  color: #fff !important;
+  border: 1px solid var(--dark);
   border-radius: 2px;
-  border-bottom: 1px solid currentColor !important;
 }
-.btn-light { color: #fff; }
-.btn-light:hover { background: var(--off-white); color: var(--dark); }
-.btn-dark { color: var(--ink); }
-.btn-dark:hover { background: var(--ink); color: var(--bg); }
+.btn:hover { background: var(--accent); border-color: var(--accent); }
 
 /* Awards & Recognitions */
 .award-featured {
@@ -416,6 +417,20 @@ ul.awards-list li .award-amount {
   border-radius: 6px;
   margin-bottom: 28px;
   display: block;
+}
+
+/* Contact page — prominent email, supporting text set apart below */
+.contact-email {
+  font-family: var(--font-ui);
+  font-size: 30px;
+  margin: 8px 0 20px;
+}
+.contact-email a { border-bottom: none; }
+.contact-note {
+  padding-left: 20px;
+  border-left: 2px solid var(--line);
+  color: var(--ink-soft);
+  margin-bottom: 36px;
 }
 
 /* Icon column */
