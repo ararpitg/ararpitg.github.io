@@ -85,7 +85,7 @@
     document.addEventListener("keydown", onKey);
   }
 
-  document.querySelectorAll(".field-photo img, .header-photo-wrap img").forEach(function (img) {
+  document.querySelectorAll(".field-photo img, .header-photo-wrap img, .hats-grid img").forEach(function (img) {
     img.addEventListener("click", function () { openLightbox(img.src, img.alt); });
   });
 
