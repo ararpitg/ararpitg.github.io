@@ -311,13 +311,13 @@ h4 { font-size: 15px; margin: 16px 0 4px; }
 .bio-more { display: none; }
 .bio-more.expanded { display: block; }
 .hats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  display: flex;
+  justify-content: center;
   margin: 0 0 24px;
 }
 .hats-grid img {
   width: 100%;
+  max-width: 260px;
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
