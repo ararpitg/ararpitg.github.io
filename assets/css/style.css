@@ -67,7 +67,7 @@ header.site-header .wrap {
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  max-width: 920px;
+  max-width: 1180px;
 }
 .site-title {
   font-family: var(--font-ui);
@@ -104,6 +104,10 @@ nav.site-nav ul {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+}
+/* Keep the full nav on a single row on desktop; wrapping resumes below this. */
+@media (min-width: 1024px) {
+  nav.site-nav ul { flex-wrap: nowrap; white-space: nowrap; gap: 22px; }
 }
 nav.site-nav a {
   color: var(--dark-soft);
@@ -814,4 +818,63 @@ nav.page-nav a:hover,
 nav.page-nav a.active {
   color: var(--accent);
   font-weight: 600;
+}
+
+
+/* Film thumbnail cards (link out to Vimeo / YouTube) */
+.film-thumb {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  margin-bottom: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+  border-bottom: none;
+}
+.film-thumb img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.film-thumb::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 64px; height: 64px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  background: rgba(20, 19, 18, 0.55) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") no-repeat center / 26px 26px;
+  backdrop-filter: blur(2px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.film-thumb:hover img,
+.film-thumb:focus-visible img {
+  transform: scale(1.03);
+  filter: brightness(0.85);
+}
+.film-thumb:hover::after,
+.film-thumb:focus-visible::after {
+  background-color: rgba(20, 19, 18, 0.8);
+  transform: scale(1.08);
+}
+.film-thumb:focus-visible {
+  outline: 2px solid var(--ink, #262422);
+  outline-offset: 3px;
+}
+.film-access {
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  color: var(--ink-soft, #6b6459);
+  margin-top: -2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-thumb img,
+  .film-thumb::after { transition: none; }
+  .film-thumb:hover img,
+  .film-thumb:focus-visible img { transform: none; }
 }
