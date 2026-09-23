@@ -444,8 +444,10 @@ ul.awards-list li .award-amount {
 /* Contact page — prominent email, supporting text set apart below */
 .contact-email {
   font-family: var(--font-ui);
-  font-size: 30px;
+  font-size: clamp(20px, 5.2vw, 30px);
+  line-height: 1.45;
   margin: 8px 0 20px;
+  overflow-wrap: anywhere;
 }
 .contact-email a { border-bottom: none; }
 .contact-note {
