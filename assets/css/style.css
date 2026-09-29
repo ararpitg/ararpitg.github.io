@@ -109,6 +109,10 @@ nav.site-nav ul {
 @media (min-width: 1024px) {
   nav.site-nav ul { flex-wrap: nowrap; white-space: nowrap; gap: 22px; }
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  nav.site-nav ul { gap: 15px; }
+  nav.site-nav a { letter-spacing: 0.05em; font-size: 12.5px; }
+}
 nav.site-nav a {
   color: var(--dark-soft);
   border-bottom: none;
