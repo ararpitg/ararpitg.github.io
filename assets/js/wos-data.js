@@ -91,6 +91,7 @@ window.WOS_RECORDS = [
     year: "1996", region: "Jharkhand", coverage: "Ranchi, Jharkhand", paths: ["culture"],
     subjects: ["Adivasi film collective", "human rights", "documentary"],
     access: "open", url: "https://akhrasite.wordpress.com/", urlLabel: "Visit",
+    thumb: "../assets/img/wos/akhra-edit-suite.jpg",
     description: "A Ranchi-based group describing itself as committed persons, mostly Indigenous youth, working in culture, communication, and the human rights of Indigenous (tribal) peoples. It has made more than thirty documentaries, several of them National Film Award winners.",
     note: "The archive's longest-running point of reference for Adivasi filmmaking in Jharkhand. Several of its films are in the catalog below."
   },
@@ -629,5 +630,14 @@ window.WOS_RECORDS = [
     access: "open", url: "https://www.trijharkhand.in/en/tribal-bulletins", urlLabel: "TRI bulletins",
     citation: "Baski, Bhujendra, ed. 2018. *The Journal of Dr. Ramdayal Munda Tribal Welfare Research Institute* 45 (May). Ranchi.",
     description: "Short articles on the livelihoods, health, and education of Jharkhand's tribal communities, including the Asur, Sabar, and Birhor, and on tea-garden migrants from Chotanagpur. The first issue under the Institute's new name."
+  },
+  {
+    id: "WOS-086", type: "film", title: "Guftagoo with Ranendra", creator: "Sansad TV (Guftagoo series)",
+    region: "Jharkhand", language: "Hindi", format: "Television interview, c. 31 min",
+    paths: ["culture", "archives"], subjects: ["Ranendra", "Hindi literature", "Tribal Welfare Research Institute"],
+    access: "open", url: "https://www.youtube.com/watch?v=FNxv1Pq-Ah0", urlLabel: "Watch on YouTube",
+    thumb: "https://img.youtube.com/vi/FNxv1Pq-Ah0/hqdefault.jpg",
+    description: "An episode of the interview series Guftagoo with Ranendra, novelist and former director of the Tribal Welfare Research Institute in Ranchi, published on Sansad TV's channel.",
+    note: "A writer who ran the state's tribal research institute: a bridge between the TRI documents below and Adivasi literary work."
   }
 ];
