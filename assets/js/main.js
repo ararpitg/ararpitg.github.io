@@ -13,6 +13,15 @@
     };
     window.addEventListener("scroll", onHeaderScroll, { passive: true });
     onHeaderScroll();
+
+    /* Expose the header's current height so in-page sticky bars sit just below it */
+    var setHeaderHeight = function () {
+      document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+    };
+    header.addEventListener("transitionend", setHeaderHeight);
+    window.addEventListener("resize", setHeaderHeight);
+    window.addEventListener("scroll", setHeaderHeight, { passive: true });
+    setHeaderHeight();
   }
 
   /* ---------- Scroll-reveal fade-ins ---------- */
