@@ -95,7 +95,7 @@ window.WOS_RECORDS = [
     access: "open", url: "https://akhrasite.wordpress.com/", urlLabel: "Visit",
     thumb: "../assets/img/wos/akhra-edit-suite.jpg",
     description: "A Ranchi-based group describing itself as committed persons, mostly Indigenous youth, working in culture, communication, and the human rights of Indigenous (tribal) peoples. It has made more than thirty documentaries, several of them National Film Award winners.",
-    note: "The archive's longest-running point of reference for Adivasi filmmaking in Jharkhand. Several of its films are in the catalog below."
+    note: "The archive's longest-running point of reference for Adivasi filmmaking in Jharkhand. Its team includes the filmmaker and editor Rupesh Kr Sahu (WOS-106), and ten of its films are held by UCLA Library (WOS-105)."
   },
   {
     id: "WOS-011", type: "collective", title: "Jharkhandi Bhasha Sahitya Sanskriti Akhra", creator: "Vandna Tete (founder)",
@@ -169,9 +169,9 @@ window.WOS_RECORDS = [
     id: "WOS-022", type: "film", title: "Development Flows from the Barrel of the Gun (Vikas Bandook Ki Nal Se)", creator: "Biju Toppo and Meghnath (AKHRA)",
     year: "2003", region: "India", coverage: "Jharkhand and central and western India", language: "Hindi, with English subtitles", format: "Documentary, 58 min", paths: ["nature"],
     subjects: ["development-induced displacement", "police violence", "human rights"],
-    access: "request", url: "https://akhrasite.wordpress.com/", urlLabel: "AKHRA",
-    description: "About the violation of Indigenous people's human rights through development projects, following resistance at Kashipur, Koel Karo, Nagarnar, and elsewhere. Awarded at Film South Asia 2004 and Vatavaran 2005. A German version was also made. No public stream; contact AKHRA.",
-    note: "Read alongside the contemporary review (WOS-072) and Meghnath's 2012 interview (WOS-071)."
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997174355606533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "About the violation of Indigenous people's human rights through development projects, following resistance at Kashipur, Koel Karo, Nagarnar, and elsewhere. Awarded at Film South Asia 2004 and Vatavaran 2005. A German version was also made. No public stream; available to researchers through UCLA Library, or on request from AKHRA.",
+    note: "Held by UCLA Library (54 min). Read alongside the contemporary review (WOS-072) and Meghnath's 2012 interview (WOS-071)."
   },
   {
     id: "WOS-023", type: "film", title: "Accumulated Injustice", creator: "AKHRA, with Adivasi-Koordination in Germany",
@@ -179,7 +179,8 @@ window.WOS_RECORDS = [
     subjects: ["industrialization", "steel plant", "displacement"],
     access: "open", url: "https://www.youtube.com/watch?v=CpbIsrjDZuM", urlLabel: "Watch on YouTube",
     thumb: "https://img.youtube.com/vi/CpbIsrjDZuM/hqdefault.jpg",
-    description: "Adivasi people's living conditions on the dark side of the Rourkela Steel Plant. Full film on AKHRA's official channel."
+    description: "Adivasi people's living conditions on the dark side of the Rourkela Steel Plant. Full film on AKHRA's official channel.",
+    note: "UCLA Library also holds this film, catalogued there as 2012."
   },
   {
     id: "WOS-024", type: "film", title: "Naachi Se Baanchi", creator: "Biju Toppo and Meghnath (AKHRA); produced by Films Division",
@@ -188,7 +189,7 @@ window.WOS_RECORDS = [
     access: "request", url: "https://www.youtube.com/watch?v=gApeIh0UZho", urlLabel: "Watch an excerpt",
     thumb: "https://img.youtube.com/vi/gApeIh0UZho/hqdefault.jpg",
     description: "On the life and work of Dr. Ramdayal Munda, a leading Adivasi intellectual of the Jharkhand movement. Rajat Kamal, 65th National Film Awards. Only an excerpt is public.",
-    note: "Its title, “those who dance will survive,” names the archive's wager: that cultural practice is itself a form of persistence."
+    note: "The full film (71 min) is held by UCLA Library. Its title, “those who dance will survive,” names the archive's wager: that cultural practice is itself a form of persistence."
   },
   {
     id: "WOS-025", type: "film", title: "We Do Not Need Dust of Development", creator: "Biju Toppo and Meghnath (AKHRA)",
@@ -778,5 +779,70 @@ window.WOS_RECORDS = [
     access: "purchase", url: "https://doi.org/10.1215/9780822376781", urlLabel: "DOI",
     citation: "Simpson, Audra. 2014. *Mohawk Interruptus: Political Life Across the Borders of Settler States*. Durham, NC: Duke University Press.",
     description: "An ethnography of Kahnawà:ke Mohawk political life that develops refusal and nested sovereignty as alternatives to seeking recognition from settler states."
+  },
+  /* ---------- AKHRA films at UCLA Library ---------- */
+  {
+    id: "WOS-105", type: "library", title: "AKHRA films at UCLA Library", creator: "UCLA Library",
+    region: "Global", coverage: "Los Angeles", paths: ["archives"], subjects: ["AKHRA", "film collection", "library holdings"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/search?query=any,contains,Akhra%20Ranchi&vid=01UCS_LAL:UCLA", urlLabel: "Search UCLA Library",
+    description: "UCLA Library catalogues ten films by the AKHRA collective, from Development Flows from the Barrel of the Gun (2003) and Kora Rajee (2005) to Rat Trap and Sohrai (2022), available to the university's students and researchers.",
+    note: "A collective's work described under a university library's standards. What that means for custody is one of the questions the First Principles take up."
+  },
+  {
+    id: "WOS-106", type: "film", title: "Rat Trap", creator: "Rupesh Kr Sahu (script, editing, direction); produced by Meghnath and Biju Toppo, AKHRA",
+    year: "2022", region: "Jharkhand", language: "Santali, English", format: "Documentary, 35 min",
+    paths: ["nature"], subjects: ["rat-hole coal mining", "coal miners", "livelihoods"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997220068906533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "The daily lives of rat-hole coal miners in Jharkhand, who risk their lives for a livelihood, whose accidents often go unreported, and who, when a mine collapses, cannot openly claim the bodies of those they lose."
+  },
+  {
+    id: "WOS-107", type: "film", title: "Kora Rajee", creator: "Biju Toppo (director); Meghnath (producer), AKHRA",
+    year: "2005", region: "India", coverage: "Jharkhand, North Bengal, and Assam", language: "Hindi, English, Kurukh", format: "Documentary, c. 52 min",
+    paths: ["culture", "nature"], subjects: ["migration", "tea-garden labour", "Jharkhandi diaspora"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997174355306533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "A documentary on the struggles of migrants from Jharkhand working in the tea gardens of North Bengal and Assam."
+  },
+  {
+    id: "WOS-108", type: "film", title: "Loha Garam Hai (Iron Is Hot)", creator: "Biju Toppo and Meghnath, AKHRA",
+    year: "2007", region: "Jharkhand", language: "Hindi", format: "Documentary, c. 45 min",
+    paths: ["nature"], subjects: ["sponge iron industry", "pollution", "health"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997174355806533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "The lives of people surviving alongside the sponge iron industry in Jharkhand, and its effects on air, health, and land."
+  },
+  {
+    id: "WOS-109", type: "film", title: "Gadi Lohardaga Mail", creator: "Biju Toppo and Meghnath, AKHRA",
+    year: "2005", region: "Jharkhand", coverage: "Lohardaga district", language: "Nagpuri (Sadani), Hindi", format: "Music film, c. 29 min",
+    paths: ["culture"], subjects: ["Nagpuri songs", "Sadani folk songs", "railways", "memory"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997174355706533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "Nostalgic Nagpuri folk songs performed on the narrow-gauge Lohardaga passenger train, sketching the social life of the district it ran through. Catalogued at UCLA under the title Gari Lohardaga Mela."
+  },
+  {
+    id: "WOS-110", type: "film", title: "Sohrai", creator: "Biju Toppo and Meghnath, AKHRA; produced for the Dr. Ramdayal Munda Tribal Welfare Research Institute",
+    year: "2022", region: "Jharkhand", language: "Hindi", format: "Documentary, 20 min",
+    paths: ["culture", "nature"], subjects: ["Sohrai", "Santhal", "harvest festival", "cattle"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997220058806533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "The Santhal festival of Sohrai, celebrated in Kartik, and the place of cattle in the shift from foraging to agriculture.",
+    note: "Made by an Adivasi collective for the state's tribal research institute: the two archives this page sets against each other, in one production."
+  },
+  {
+    id: "WOS-111", type: "film", title: "Karama", creator: "Biju Toppo (director), AKHRA",
+    region: "Jharkhand", language: "Hindi", format: "Documentary, 16 min",
+    paths: ["culture", "nature"], subjects: ["Karam festival", "harvest festivals", "Munda"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997220077906533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "Karam, one of Jharkhand's major festivals, in which nature is worshipped for a good harvest and for the wellbeing of people and animals."
+  },
+  {
+    id: "WOS-112", type: "film", title: "Srishtikatha: Stories of Creation", creator: "AKHRA; stories told by Ramdayal Munda; animation and direction by Tuhin Paul; produced by Meghnath",
+    region: "Jharkhand", language: "Hindi", format: "Animated film, 8 min",
+    paths: ["culture", "youth"], subjects: ["Munda creation stories", "Singbonga", "animation", "folklore"],
+    access: "institutional", url: "https://search.library.ucla.edu/discovery/fulldisplay?docid=alma9997220082106533&vid=01UCS_LAL:UCLA", urlLabel: "UCLA Library record",
+    description: "Animated Munda creation stories, the creation of the earth and of day and night by Singbonga, as told by Ramdayal Munda, made so that children can hear the stories their elders once told."
+  },
+  {
+    id: "WOS-113", type: "text", strand: "Indigenous media and visual sovereignty", title: "To Walk Is to Dance, to Speak Is to Sing: Akhra Ranchi’s Filmic Representations of Adivasi Dance in Jharkhand", creator: "Biju Toppo and Aparna Sharma",
+    year: "2025", region: "Jharkhand", format: "Book chapter", paths: ["culture"], subjects: ["AKHRA", "Adivasi dance", "documentary"],
+    access: "institutional", url: "https://doi.org/10.1093/oxfordhb/9780197526224.013.28", urlLabel: "DOI",
+    citation: "Toppo, Biju, and Aparna Sharma. 2025. “To Walk Is to Dance, to Speak Is to Sing: Akhra Ranchi’s Filmic Representations of Adivasi Dance in Jharkhand.” In *The Oxford Handbook of Indian Dance*, edited by Anurima Banerji and Prarthana Purkayastha. New York: Oxford University Press.",
+    description: "A chapter co-written by an AKHRA founder on how the collective's films represent Adivasi dance, where walking, speaking, dancing, and singing are continuous."
   }
 ];
