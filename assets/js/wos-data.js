@@ -15,6 +15,7 @@ window.WOS_STRANDS = [
   "Protocols, openness, and data governance",
   "Community media in India",
   "Adivasi politics and place",
+  "Adivasi writing",
   "Critical media literacy"
 ];
 
@@ -639,5 +640,94 @@ window.WOS_RECORDS = [
     thumb: "https://img.youtube.com/vi/FNxv1Pq-Ah0/hqdefault.jpg",
     description: "An episode of the interview series Guftagoo with Ranendra, novelist and former director of the Tribal Welfare Research Institute in Ranchi, published on Sansad TV's channel.",
     note: "A writer who ran the state's tribal research institute: a bridge between the TRI documents below and Adivasi literary work."
+  },
+  /* ---------- Adivasi writing, testimony, and media criticism ---------- */
+  {
+    id: "WOS-087", type: "text", strand: "Adivasi politics and place", title: "Adivasis and Their Forest", creator: "Gladson Dungdung",
+    year: "2019", region: "Jharkhand", language: "English", format: "Book, 330 pp.", paths: ["nature"],
+    subjects: ["forest rights", "Forest Rights Act", "Adivasi land"],
+    access: "open", url: "https://www.iwgia.org/en/publications/adivasis-and-their-forest", urlLabel: "IWGIA",
+    citation: "Dungdung, Gladson. 2019. *Adivasis and Their Forest*. Ranchi: Adivasi Publications, with IWGIA.",
+    description: "A study of Adivasi communities' relationship with forests, the Forest Rights Act, and the state, by a Kharia human-rights activist and writer from Simdega."
+  },
+  {
+    id: "WOS-088", type: "text", strand: "Adivasi politics and place", title: "Crossfire (क्रॉसफायर)", creator: "Gladson Dungdung and Sanjay Krishna",
+    year: "2014", region: "Jharkhand", coverage: "Saranda forest, West Singhbhum", language: "Hindi", format: "Book", paths: ["nature"],
+    subjects: ["red corridor", "counter-insurgency", "human rights"],
+    access: "purchase", url: "https://adivaani.org/2014/06/16/crossfire-gladson-dungdungs-new-book-in-hindi-is-out/", urlLabel: "Publisher's note",
+    citation: "Dungdung, Gladson, and Sanjay Krishna. 2014. *Crossfire*. Kolkata: adivaani.",
+    description: "Accounts of Adivasi civilians caught between anti-Maoist operations and armed groups, centred on the Saranda forest. Published by adivaani (WOS-015)."
+  },
+  {
+    id: "WOS-089", type: "text", strand: "Adivasi politics and place", title: "Vikas ke Kabragah (विकास के कब्रगाह)", creator: "Sunil Minj and Gladson Dungdung",
+    year: "2018", region: "Jharkhand", language: "Hindi", format: "Book, 155 pp.", paths: ["nature"],
+    subjects: ["mining", "industrialization", "displacement"],
+    access: "purchase", url: "https://books.google.com/books?id=K-z2zwEACAAJ", urlLabel: "Google Books",
+    citation: "Minj, Sunil, and Gladson Dungdung. 2018. *Vikas ke Kabragah*. Deshaj Prakashan.",
+    description: "A Hindi study of the effects of industrial and mining development on Adivasi communities in Jharkhand. Its title translates as “graveyards of development.”"
+  },
+  {
+    id: "WOS-090", type: "text", title: "Bhumi Adhigrahan, Punarvas evam Punarvyavasthapan Kanoon mein Sanshodhan Kyon?", creator: "Gladson Dungdung and Sunil Minj",
+    year: "2019", region: "Jharkhand", language: "Hindi", format: "Booklet, 40 pp.", paths: ["nature"],
+    subjects: ["land acquisition law", "rehabilitation and resettlement"],
+    access: "purchase", url: "https://books.google.com/books?id=uN76zwEACAAJ", urlLabel: "Google Books",
+    citation: "Dungdung, Gladson, and Sunil Minj. 2019. *Bhumi Adhigrahan, Punarvas evam Punarvyavasthapan Kanoon mein Sanshodhan Kyon?* Ranchi: Adivasi Publications.",
+    description: "A booklet asking why Jharkhand amended the land acquisition, rehabilitation, and resettlement law."
+  },
+  {
+    id: "WOS-091", type: "platform", title: "Adivasi Hunkar", creator: "Gladson Dungdung",
+    region: "Jharkhand", language: "English and Hindi", paths: ["nature", "culture"], subjects: ["Adivasi rights", "independent media", "essays"],
+    access: "open", url: "https://adivasihunkar.wordpress.com/", urlLabel: "Read",
+    description: "Gladson Dungdung's platform for essays and reporting on Adivasi land, forest, and human-rights issues, where many of his books are first argued and cited.",
+    note: "An example of the independent Adivasi media Poyam describes (WOS-067)."
+  },
+  {
+    id: "WOS-092", type: "text", strand: "Adivasi writing", title: "Ishwar aur Bazar (ईश्वर और बाज़ार)", creator: "Jacinta Kerketta",
+    year: "2022", region: "Jharkhand", language: "Hindi", format: "Poetry collection", paths: ["culture"],
+    subjects: ["poetry", "religion", "market", "Adivasi life"],
+    access: "purchase", url: "https://www.rajkamalprakashan.com/products/ishwar-aur-bazar", urlLabel: "Publisher",
+    citation: "Kerketta, Jacinta. 2022. *Ishwar aur Bazar*. New Delhi: Rajkamal Prakashan.",
+    description: "The third poetry collection by the Oraon poet and journalist from West Singhbhum, on how religion and market-led development press on Adivasi life, land, and culture."
+  },
+  {
+    id: "WOS-093", type: "text", strand: "Adivasi writing", title: "Gayab Hota Desh (गायब होता देश)", creator: "Ranendra",
+    year: "2014", region: "Jharkhand", coverage: "Ranchi", language: "Hindi", format: "Novel", paths: ["nature", "culture"],
+    subjects: ["novel", "land dispossession", "urbanization"],
+    access: "purchase", url: "https://www.rajkamalprakashan.com/products/gayab-hota-desh", urlLabel: "Publisher (2025 edition)",
+    citation: "Ranendra. 2014. *Gayab Hota Desh*. New Delhi: Penguin Books India. New edition, Rajkamal Prakashan, 2025.",
+    description: "A novel set around Ranchi in which a journalist's disappearance opens onto the history of Adivasi land taken for urban growth and real estate. Ranendra later directed the Tribal Welfare Research Institute; see his Guftagoo interview (WOS-086)."
+  },
+  {
+    id: "WOS-094", type: "text", strand: "Community media in India", title: "Adivasi Patrakarita (आदिवासी पत्रकारिता)", creator: "Roopchand Gautam",
+    year: "2024", region: "India", language: "Hindi", format: "Book", paths: ["culture"],
+    subjects: ["Adivasi journalism", "media history"],
+    access: "purchase",
+    citation: "Gautam, Roopchand. 2024. *Adivasi Patrakarita*.",
+    description: "A Hindi book on Adivasi journalism by a writer whose other books study Dalit and health journalism.",
+    note: "Catalogued from the copy I consulted; publisher details to be added."
+  },
+
+  /* ---------- Samuday Ke Saath ---------- */
+  {
+    id: "WOS-095", type: "festival", title: "Samuday Ke Saath", creator: "Tata Steel Foundation, as part of Samvaad",
+    year: "2015", region: "Jharkhand", coverage: "Jamshedpur and Ranchi", paths: ["culture", "youth"],
+    subjects: ["film screenings", "Indigenous film festival", "short film competition", "corporate programme"],
+    access: "open", url: "https://www.tatasteel.com/initiatives/samvaad/samvaad-2015.html", urlLabel: "Tata Steel (Samvaad 2015)",
+    description: "A film programme begun in 2015 within Samvaad, Tata Steel Foundation's tribal conclave, screening films on tribal life at colleges, community centres, and schools, with festivals in Jamshedpur and, in 2023, at IIM Ranchi, where the programme included Naachi Se Baanchi (WOS-024).",
+    note: "A corporate foundation's programme, not a community archive: catalogued so that the institutions now circulating Adivasi cinema are visible alongside the collectives that make it. Coverage in WOS-096 and WOS-097."
+  },
+  {
+    id: "WOS-096", type: "text", title: "Indigenous Film Festival to Explore Heart and Soul of Jharkhand", creator: "The Indian Tribal",
+    year: "2023", region: "Jharkhand", format: "News report", paths: ["culture"], subjects: ["Samuday Ke Saath", "IIM Ranchi"],
+    access: "open", url: "https://theindiantribal.com/2023/08/21/news-ranchi-india-indigenous-film-festival-to-explore-heart-and-soul-of-jharkhand/", urlLabel: "Read",
+    citation: "“Indigenous Film Festival to Explore Heart and Soul of Jharkhand.” *The Indian Tribal*, August 21, 2023.",
+    description: "A preview of the Samuday Ke Saath festival at IIM Ranchi, organized with Samvaad and Tata Steel Foundation, with sessions on cinema and Adivasiyat and the participation of Biju Toppo and Meghnath."
+  },
+  {
+    id: "WOS-097", type: "text", title: "Samuday Ke Saath: Curtain Falls on Three-Day Short Film Festival in Jamshedpur", creator: "Pinaki Majumdar",
+    year: "2022", region: "Jharkhand", coverage: "Jamshedpur", format: "News report", paths: ["culture"], subjects: ["Samuday Ke Saath", "short film festival"],
+    access: "open", url: "https://lagatar24.com/samuday-ke-saath-curtain-falls-on-three-day-short-film-festival-in-jamshedpur/", urlLabel: "Read",
+    citation: "Majumdar, Pinaki. 2022. “Samuday Ke Saath: Curtain Falls on Three-Day Short Film Festival in Jamshedpur.” *Lagatar24*, August 10, 2022.",
+    description: "A report on the close of the 2022 Samuday Ke Saath festival in Jamshedpur."
   }
 ];
