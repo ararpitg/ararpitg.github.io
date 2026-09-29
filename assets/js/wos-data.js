@@ -164,10 +164,11 @@ window.WOS_RECORDS = [
   },
   {
     id: "WOS-022", type: "film", title: "Development Flows from the Barrel of the Gun (Vikas Bandook Ki Nal Se)", creator: "Biju Toppo and Meghnath (AKHRA)",
-    year: "2003", region: "India", coverage: "Jharkhand and central and western India", format: "Documentary", paths: ["nature"],
-    subjects: ["development-induced displacement", "human rights"],
+    year: "2003", region: "India", coverage: "Jharkhand and central and western India", language: "Hindi, with English subtitles", format: "Documentary, 58 min", paths: ["nature"],
+    subjects: ["development-induced displacement", "police violence", "human rights"],
     access: "request", url: "https://akhrasite.wordpress.com/", urlLabel: "AKHRA",
-    description: "About the violation of Indigenous people's human rights through development projects. Awarded at Film South Asia 2004 and Vatavaran 2005. No public stream; contact AKHRA."
+    description: "About the violation of Indigenous people's human rights through development projects, following resistance at Kashipur, Koel Karo, Nagarnar, and elsewhere. Awarded at Film South Asia 2004 and Vatavaran 2005. A German version was also made. No public stream; contact AKHRA.",
+    note: "Read alongside the contemporary review (WOS-072) and Meghnath's 2012 interview (WOS-071)."
   },
   {
     id: "WOS-023", type: "film", title: "Accumulated Injustice", creator: "AKHRA, with Adivasi-Koordination in Germany",
@@ -478,5 +479,155 @@ window.WOS_RECORDS = [
     access: "open", url: "https://caravanmagazine.in/media/resurgent-adivasi-media-setting-own-terms", urlLabel: "Read",
     citation: "Poyam, Akash. 2021. “A Resurgent Adivasi Media Is Setting Its Own Terms.” *The Caravan*, December 1, 2021.",
     description: "Argues that the Indian media's exclusion of Adivasi and marginalized voices is being challenged by independent platforms created and run by Adivasi journalists."
+  },
+  /* ---------- Additions from the curator's research archive ---------- */
+  {
+    id: "WOS-068", type: "film", title: "Gram Sabha ki Kahani: A Local Democracy Narrative Exercise", creator: "Akhra Ranchi, for Gram Swashasan Abhiyan; Centre for Local Democracy, Azim Premji University",
+    region: "Jharkhand", coverage: "Gumla, West Singhbhum, and other districts of Jharkhand", language: "Hindi", format: "Series: 7 short films and podcasts",
+    paths: ["culture", "nature"], subjects: ["Gram Sabha", "local democracy", "Community Forest Rights", "Forest Rights Act 2006", "women's participation", "youth leadership"],
+    access: "open", url: "https://azimpremjiuniversity.edu.in/gram-sabha-ki-kahani", urlLabel: "Watch and listen",
+    description: "Short films and podcasts from villages in Jharkhand on how Gram Sabhas work in practice: forest rights at Baranga Munda Tola, women's participation, youth leadership, drinking water and the COVID response.",
+    note: "Media made about self-government, by a Jharkhand media collective, for a university's local-democracy programme: a useful case for asking where participation begins and ends."
+  },
+  {
+    id: "WOS-069", type: "film", title: "Ek Ropa Dhaan", creator: "Meghnath Bhattacharya and Biju Toppo, for PRADAN",
+    year: "2009", region: "India", language: "Hindi; English version", format: "Documentary, 26 min (Hindi and English versions)",
+    paths: ["nature"], subjects: ["System of Rice Intensification", "paddy cultivation", "development communication"],
+    access: "open", url: "https://www.youtube.com/watch?v=INLFfCqz6NQ", urlLabel: "Watch on YouTube (Hindi)",
+    thumb: "https://img.youtube.com/vi/INLFfCqz6NQ/hqdefault.jpg",
+    description: "A film on the System of Rice Intensification (SRI) for paddy cultivation, made for PRADAN with support from the Aga Khan Foundation and the European Union. The English version is also on PRADAN's channel.",
+    note: "AKHRA's protest films and its development-communication films were made by the same hands. Meghnath calls the latter “constructive” films (WOS-071). Reviewed in India Together (WOS-070)."
+  },
+  {
+    id: "WOS-070", type: "text", title: "Popularising SRI", creator: "Shoma A. Chatterji",
+    year: "2011", region: "India", format: "Film review", paths: ["nature"], subjects: ["film review", "SRI"],
+    access: "open", url: "https://indiatogether.org/sri-reviews/", urlLabel: "Read",
+    citation: "Chatterji, Shoma A. 2011. “Popularising SRI.” *India Together*, June 29, 2011.",
+    description: "A review of Ek Ropa Dhaan (WOS-069) and its account of the System of Rice Intensification."
+  },
+  {
+    id: "WOS-071", type: "text", strand: "Community media in India", title: "Representing the Voices of the Voiceless", creator: "Meghnath, in conversation with Nicola Beißner, Katja Thekla Meyer, and Edda Wilde",
+    year: "2012", region: "Jharkhand", format: "Interview in an exhibition catalogue", paths: ["culture", "method"],
+    subjects: ["AKHRA", "documentary as social work", "censorship", "people's forums"],
+    access: "open", url: "https://www.hgb-leipzig.de/f/e/PDF/TheSubjectiveObject_book.pdf", urlLabel: "Read (catalogue PDF, pp. 26–28)",
+    citation: "Meghnath. 2012. “Representing the Voices of the Voiceless.” Interview by Nicola Beißner, Katja Thekla Meyer, and Edda Wilde. In *The Subjective Object*, edited by Anna-Sophie Springer, 26–28. Leipzig: K. Verlag.",
+    description: "Meghnath describes AKHRA's filmmaking as an extension of social work, sets its protest films beside its “constructive” films, and discusses the obstacles to broadcast that sent the films to people's forums instead. Published with an exhibition at the GRASSI Museum für Völkerkunde zu Leipzig, 2012.",
+    note: "One of the few places where an AKHRA founder speaks at length, in print, about method."
+  },
+  {
+    id: "WOS-072", type: "text", title: "Infochangeindia Review: Development Flows from the Barrel of a Gun", creator: "Infochange India (reviewer not named); posted by Frederick Noronha",
+    year: "2005", region: "India", format: "Film review (blog repost)", paths: ["nature"], subjects: ["film review", "displacement"],
+    access: "open", url: "https://indiadocu.blogspot.com/2005/12/infochangeindia-review-development.html", urlLabel: "Read",
+    citation: "“Infochangeindia Review: Development Flows from the Barrel of a Gun.” Posted by Frederick Noronha. *Documentary Films in India* (blog), December 24, 2005.",
+    description: "A review of Development Flows from the Barrel of the Gun (WOS-022) that sets its record of police violence against a locally run mini-hydel project as the counter-example."
+  },
+  {
+    id: "WOS-073", type: "film", title: "In Search of Ajantrik", creator: "Meghnath",
+    year: "2023", region: "Jharkhand", language: "Hindi, Bangla, English (English subtitles)", format: "Documentary, 46 min",
+    paths: ["culture"], subjects: ["Ritwik Ghatak", "Ajantrik", "cinema and Adivasi representation"],
+    access: "request", url: "https://www.ourcinema.in/festival/film/in-search-of-ajantrik/", urlLabel: "Festival listing",
+    description: "A filmmaker returns to the Jharkhand locations of Ritwik Ghatak's Ajantrik to ask why Ghatak chose the region and how the film pictured Adivasi life. International premiere at the Kolkata People's Film Festival.",
+    note: "A film about a film: an Adivasi media practitioner reading a canonical outsider's image of Jharkhand."
+  },
+  {
+    id: "WOS-074", type: "film", title: "Lac Ke Hazar Rang", creator: "PRADAN",
+    year: "2008", region: "India", language: "Hindi; English version, Lacquered Dreams", format: "Documentary",
+    paths: ["nature"], subjects: ["lac", "non-timber forest produce", "livelihoods"],
+    access: "open", url: "https://www.youtube.com/watch?v=yJR5JqgCJwE", urlLabel: "Watch on YouTube",
+    thumb: "https://img.youtube.com/vi/yJR5JqgCJwE/hqdefault.jpg",
+    description: "A film on promoting lac cultivation and developing lac as a sector. The English version is titled Lacquered Dreams.",
+    note: "Pairs with Inoculating Lac (WOS-004): the same forest economy, seen from an NGO's programme and from the field."
+  },
+  {
+    id: "WOS-075", type: "platform", title: "PRADAN Knowledge Repository", creator: "PRADAN",
+    region: "India", coverage: "Jharkhand, Odisha, Chhattisgarh, and other states of central and eastern India", language: "Hindi, English, Odia",
+    paths: ["archives", "nature"], subjects: ["training films", "development communication", "NewsReach"],
+    access: "open", url: "https://www.youtube.com/@pradanknowledgerepository3403", urlLabel: "YouTube channel",
+    description: "PRADAN's public archive of training and documentary films on agriculture, livestock, forest produce, and women's collectives. Its journal NewsReach is archived separately at pradan.net.",
+    note: "Development media rather than Indigenous media. It is here because much of the region's filmed record of Adivasi agriculture was made in this idiom."
+  },
+  {
+    id: "WOS-076", type: "collective", title: "Lahanti Club", creator: "Lahanti Club",
+    region: "India", coverage: "Chakai", paths: ["youth", "nature"], subjects: ["tribal youth group", "forest food"],
+    access: "open", url: "https://www.youtube.com/@lahanticlub3491", urlLabel: "YouTube channel",
+    description: "A tribal youth group in Chakai that makes short videos, among them Sacred Fruit – Soso, on a forest food.",
+    note: "Surfaced through PRADAN's repository, but published on the group's own channel."
+  },
+  {
+    id: "WOS-077", type: "text", strand: "Adivasi politics and place", title: "A Land of Their Own: Samuel Richard Tickell and the Formation of the Autonomous Ho Country in Jharkhand, 1818–1842", creator: "Paul Streumer",
+    year: "2024", region: "Jharkhand", coverage: "Kolhan, Jharkhand", format: "Book", paths: ["culture"],
+    subjects: ["Ho", "Kolhan Government Estate", "colonial history"],
+    access: "purchase", url: "https://wakkaman.com/", urlLabel: "Publisher",
+    citation: "Streumer, Paul. 2024. *A Land of Their Own: Samuel Richard Tickell and the Formation of the Autonomous Ho Country in Jharkhand, 1818–1842*. Indian edition. New Delhi: BlueRose Publishers. Also published by Wakkaman (Houten).",
+    description: "A history of the Kolhan Government Estate, established in 1837, and of Samuel Richard Tickell, who organized it and wrote a grammar of the Ho language. It traces how the Ho kept a large measure of autonomy and their land."
+  },
+
+  /* ---------- The state's ethnographic record: TRI publications ---------- */
+  {
+    id: "WOS-078", type: "document", title: "The Chero: A Study in Acculturation", creator: "Hari Mohan",
+    year: "1973", region: "Jharkhand", coverage: "Palamau", language: "English", format: "Monograph, 109 pp.",
+    paths: ["archives"], subjects: ["Chero", "state ethnography"],
+    access: "open", url: "https://www.trijharkhand.in/en/publications", urlLabel: "TRI publications",
+    citation: "Mohan, Hari. 1973. *The Chero: A Study in Acculturation*. Ranchi: Bihar Tribal Welfare Research Institute.",
+    description: "A monograph on the Chero of Palamau, based on fieldwork in 1962–63, covering livelihood, kinship, politics, and religion.",
+    note: "Framed by the period's model of “acculturation,” in which movement toward caste-Hindu norms is read as change along a tribe–caste continuum. Catalogued as evidence of how the state described communities, not as a neutral account of them."
+  },
+  {
+    id: "WOS-079", type: "document", title: "The Asur: Ethno-Biological Profile", creator: "Satya Prakash Gupta",
+    year: "1976", region: "Jharkhand", language: "English", format: "Monograph (Monograph Series No. 4), 173 pp.",
+    paths: ["archives"], subjects: ["Asur", "physical anthropology", "state ethnography"],
+    access: "open", url: "https://www.trijharkhand.in/en/publications", urlLabel: "TRI publications",
+    citation: "Gupta, Satya Prakash. 1976. *The Asur: Ethno-Biological Profile*. Monograph Series 4. Ranchi: Bihar Tribal Welfare Research Institute.",
+    description: "A physical-anthropology and nutrition study of the Asur, revised from the author's doctoral thesis.",
+    note: "Uses racial classification, anthropometric measurement of named individuals, and the language of the “primitive.” It contains photographs of identifiable people. It is listed here to make that history visible; the Asur speak for themselves through Asur Adivasi Mobile Radio (WOS-031)."
+  },
+  {
+    id: "WOS-080", type: "document", title: "Sauria Paharia of Rajmahal Hills", creator: "S. P. Sinha, ed.",
+    year: "1991", region: "Jharkhand", coverage: "Rajmahal Hills", language: "English, with some Hindi", format: "Edited volume, 256 pp. (Bulletin Vol. XXXI)",
+    paths: ["archives"], subjects: ["Sauria Paharia", "shifting cultivation", "state ethnography"],
+    access: "open", url: "https://www.trijharkhand.in/en/publications", urlLabel: "TRI publications",
+    citation: "Sinha, S. P., ed. 1991. *Sauria Paharia of Rajmahal Hills*. Bulletin of the Bihar Tribal Welfare Research Institute 31 (1–2). Ranchi: Bihar Tribal Welfare Research Institute.",
+    description: "An edited volume on the history, shifting cultivation, forest economy, health, and development of the Sauria Paharia, with contributions from L. P. Vidyarthi and others.",
+    note: "Its full subtitle calls its subject a “struggling primitive tribe,” a category the state still administers as PVTG."
+  },
+  {
+    id: "WOS-081", type: "document", title: "The Parhaiyas of Palamau: An Ethnographic Study", creator: "P. Dash Sharma",
+    year: "1996", region: "Jharkhand", coverage: "Palamau", language: "English", format: "Monograph, 82 pp.",
+    paths: ["archives"], subjects: ["Parhaiya", "state ethnography"],
+    access: "open", url: "https://www.trijharkhand.in/en/publications", urlLabel: "TRI publications",
+    citation: "Dash Sharma, P. [1996]. *The Parhaiyas of Palamau: An Ethnographic Study*. Ranchi: Bihar Tribal Welfare Research Institute.",
+    description: "A short ethnographic monograph on the Parhaiya of Palamau, covering demography, economy, life-cycle rites, religion, and welfare programmes. No date is printed; the preface is dated 1996."
+  },
+  {
+    id: "WOS-082", type: "document", title: "The Customary Laws of the Munda and the Oraon", creator: "Jai Prakash Gupta",
+    year: "2002", region: "Jharkhand", language: "English", format: "Book, 270 pp.",
+    paths: ["archives", "culture"], subjects: ["customary law", "land tenure", "Munda", "Oraon", "Wilkinson's Rules"],
+    access: "open", url: "https://www.trijharkhand.in/en/publications", urlLabel: "TRI publications",
+    citation: "Gupta, Jai Prakash. [2002]. *The Customary Laws of the Munda and the Oraon*. Ranchi: Jharkhand Tribal Welfare Research Institute.",
+    description: "A legal study of Munda and Oraon customary law as courts and statutes recognize it, focused on land, inheritance, and family law, with colonial regulations reproduced as annexures. No date is printed; the front matter is dated 2002."
+  },
+  {
+    id: "WOS-083", type: "document", title: "The Journal of Jharkhand Tribal Welfare Research Institute, Vol. 43", creator: "Prakash Chandra Oraon, chief ed.",
+    year: "2008", region: "Jharkhand", language: "Hindi and English", format: "Journal issue, 152 pp.",
+    paths: ["archives", "culture"], subjects: ["folk literature", "Nagpuri", "Jharkhand movement", "documentation"],
+    access: "open", url: "https://www.trijharkhand.in/en/tribal-bulletins", urlLabel: "TRI bulletins",
+    citation: "Oraon, Prakash Chandra, ed. 2008. *The Journal of Jharkhand Tribal Welfare Research Institute* 43 (June). Ranchi.",
+    description: "Mostly Hindi essays on tribal history, language, and culture, the making of Jharkhand state, and development, including an essay on the Institute's own role in documenting folk art and literature."
+  },
+  {
+    id: "WOS-084", type: "document", title: "The Journal of Jharkhand Tribal Welfare Research Institute, Vol. 44", creator: "H. S. Gupta, chief ed.",
+    year: "2015", region: "Jharkhand", language: "English and Hindi", format: "Journal issue, 132 pp.",
+    paths: ["archives"], subjects: ["health", "education", "welfare schemes", "migration"],
+    access: "open", url: "https://www.trijharkhand.in/en/tribal-bulletins", urlLabel: "TRI bulletins",
+    citation: "Gupta, H. S., ed. 2015. *The Journal of Jharkhand Tribal Welfare Research Institute* 44 (December). Ranchi.",
+    description: "Applied studies of health, nutrition, education, migration, and government schemes, with essays on tribal fine arts and the Ho of Singhbhum."
+  },
+  {
+    id: "WOS-085", type: "document", title: "The Journal of Dr. Ramdayal Munda Tribal Welfare Research Institute, Vol. 45", creator: "Bhujendra Baski, chief ed.",
+    year: "2018", region: "Jharkhand", language: "English and Hindi", format: "Journal issue, 96 pp.",
+    paths: ["archives", "nature"], subjects: ["livelihoods", "PVTGs", "tea-garden migration"],
+    access: "open", url: "https://www.trijharkhand.in/en/tribal-bulletins", urlLabel: "TRI bulletins",
+    citation: "Baski, Bhujendra, ed. 2018. *The Journal of Dr. Ramdayal Munda Tribal Welfare Research Institute* 45 (May). Ranchi.",
+    description: "Short articles on the livelihoods, health, and education of Jharkhand's tribal communities, including the Asur, Sabar, and Birhor, and on tea-garden migrants from Chotanagpur. The first issue under the Institute's new name."
   }
 ];

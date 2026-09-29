@@ -61,7 +61,8 @@
     framework: "Protocol / Framework",
     festival: "Festival",
     library: "Library / Repository",
-    audio: "Audio"
+    audio: "Audio",
+    document: "Document / State publication"
   };
   var PATH_LABELS = {
     culture: "Indigeneity & Culture",
