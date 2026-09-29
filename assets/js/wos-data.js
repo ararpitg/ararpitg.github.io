@@ -698,13 +698,12 @@ window.WOS_RECORDS = [
     description: "A novel set around Ranchi in which a journalist's disappearance opens onto the history of Adivasi land taken for urban growth and real estate. Ranendra later directed the Tribal Welfare Research Institute; see his Guftagoo interview (WOS-086)."
   },
   {
-    id: "WOS-094", type: "text", strand: "Community media in India", title: "Adivasi Patrakarita (आदिवासी पत्रकारिता)", creator: "Roopchand Gautam",
-    year: "2024", region: "India", language: "Hindi", format: "Book", paths: ["culture"],
-    subjects: ["Adivasi journalism", "media history"],
-    access: "purchase",
-    citation: "Gautam, Roopchand. 2024. *Adivasi Patrakarita*.",
-    description: "A Hindi book on Adivasi journalism by a writer whose other books study Dalit and health journalism.",
-    note: "Catalogued from the copy I consulted; publisher details to be added."
+    id: "WOS-094", type: "text", strand: "Community media in India", title: "Adivasi Patrakarita (\u0906\u0926\u093f\u0935\u093e\u0938\u0940 \u092a\u0924\u094d\u0930\u0915\u093e\u0930\u093f\u0924\u093e)", creator: "Roopchand Gautam",
+    year: "2021", region: "India", language: "Hindi", format: "Book, 251 pp.", paths: ["culture"],
+    subjects: ["Adivasi journalism", "tribal languages", "displacement", "jal-jangal-zameen movements"],
+    access: "purchase", url: "https://academicpublication.in/books/index/9789383931040", urlLabel: "Publisher",
+    citation: "Gautam, Roopchand. 2021. *Adivasi Patrakarita*. Academic Publication. ISBN 9789383931040.",
+    description: "A Hindi study of the challenges facing Adivasi journalism: reporting on water, forest, and land movements, the historical study of tribal homelands, language loss through displacement to cities, and the pressure of market forces on Adivasi communities and their heritage."
   },
 
   /* ---------- Samuday Ke Saath ---------- */
