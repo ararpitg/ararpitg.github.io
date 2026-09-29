@@ -13,6 +13,7 @@ window.WOS_STRANDS = [
   "Indigenous media and visual sovereignty",
   "Community archives",
   "Protocols, openness, and data governance",
+  "Refusal, listening, and sound",
   "Community media in India",
   "Adivasi politics and place",
   "Adivasi writing",
@@ -728,5 +729,54 @@ window.WOS_RECORDS = [
     access: "open", url: "https://lagatar24.com/samuday-ke-saath-curtain-falls-on-three-day-short-film-festival-in-jamshedpur/", urlLabel: "Read",
     citation: "Majumdar, Pinaki. 2022. “Samuday Ke Saath: Curtain Falls on Three-Day Short Film Festival in Jamshedpur.” *Lagatar24*, August 10, 2022.",
     description: "A report on the close of the 2022 Samuday Ke Saath festival in Jamshedpur."
+  },
+  /* ---------- Sources of the First Principles ---------- */
+  {
+    id: "WOS-098", type: "text", strand: "Community archives", title: "Seeing Yourself in History: Community Archives and the Fight Against Symbolic Annihilation", creator: "Michelle Caswell",
+    year: "2014", region: "Global", coverage: "United States", format: "Article", paths: ["archives", "method"], subjects: ["community archives", "symbolic annihilation"],
+    access: "open", url: "https://escholarship.org/uc/item/9gc14537", urlLabel: "Read (open access)",
+    citation: "Caswell, Michelle. 2014. “Seeing Yourself in History: Community Archives and the Fight Against Symbolic Annihilation.” *The Public Historian* 36 (4): 26–37.",
+    description: "Drawing on the South Asian American Digital Archive, argues that independent community archives counter the absence and misrepresentation of marginalized groups in mainstream records."
+  },
+  {
+    id: "WOS-099", type: "text", strand: "Refusal, listening, and sound", title: "Acoustemology", creator: "Steven Feld",
+    year: "2015", region: "Global", format: "Book chapter", paths: ["method"], subjects: ["acoustemology", "sound studies", "listening"],
+    access: "institutional", url: "https://doi.org/10.1215/9780822375494-002", urlLabel: "DOI",
+    citation: "Feld, Steven. 2015. “Acoustemology.” In *Keywords in Sound*, edited by David Novak and Matt Sakakeeny, 12–21. Durham, NC: Duke University Press.",
+    description: "Traces the term Feld coined by joining acoustics and epistemology, treating sounding and listening as a situated way of knowing. First developed in his 1996 essay on the Kaluli of Bosavi, “Waterfalls of Song.”"
+  },
+  {
+    id: "WOS-100", type: "framework", title: "The First Nations Principles of OCAP®", creator: "First Nations Information Governance Centre",
+    region: "Global", coverage: "Canada", paths: ["method"], subjects: ["ownership", "control", "access", "possession", "data sovereignty"],
+    access: "open", url: "https://fnigc.ca/ocap-training/", urlLabel: "FNIGC",
+    description: "Ownership, Control, Access, and Possession: standards for how First Nations data and information should be collected, protected, used, and shared."
+  },
+  {
+    id: "WOS-101", type: "text", strand: "Community archives", title: "Community-Driven Archives: Conocimiento, Healing, and Justice", creator: "Nancy Liliana Godoy",
+    year: "2021", region: "Global", coverage: "United States", format: "Article", paths: ["archives", "method"], subjects: ["community-driven archives", "conocimiento", "Anzaldúa"],
+    access: "open", url: "https://doi.org/10.24242/jclis.v3i2.136", urlLabel: "Read (open access)",
+    citation: "Godoy, Nancy Liliana. 2021. “Community-Driven Archives: Conocimiento, Healing, and Justice.” *Journal of Critical Library and Information Studies* 3 (2).",
+    description: "Uses Gloria Anzaldúa's path of conocimiento to frame a community-driven archives initiative, arguing that decolonizing archives means moving power and resources to communities rather than adding them to existing institutions."
+  },
+  {
+    id: "WOS-102", type: "text", strand: "Refusal, listening, and sound", title: "Hungry Listening: Resonant Theory for Indigenous Sound Studies", creator: "Dylan Robinson",
+    year: "2020", region: "Global", coverage: "Canada", format: "Book", paths: ["method", "culture"], subjects: ["listening", "Indigenous sound studies", "settler colonialism"],
+    access: "purchase", url: "https://www.upress.umn.edu/9781517907693/hungry-listening/", urlLabel: "Publisher",
+    citation: "Robinson, Dylan. 2020. *Hungry Listening: Resonant Theory for Indigenous Sound Studies*. Minneapolis: University of Minnesota Press.",
+    description: "Critiques settler “hungry listening,” which treats Indigenous song as a resource to consume, and proposes listening practices aware of the listener's position."
+  },
+  {
+    id: "WOS-103", type: "text", strand: "Refusal, listening, and sound", title: "On Ethnographic Refusal: Indigeneity, ‘Voice’ and Colonial Citizenship", creator: "Audra Simpson",
+    year: "2007", region: "Global", format: "Article", paths: ["method"], subjects: ["refusal", "ethnography", "Indigenous sovereignty"],
+    access: "open", url: "https://junctures.org/index.php/junctures/article/view/66", urlLabel: "Read (open access)",
+    citation: "Simpson, Audra. 2007. “On Ethnographic Refusal: Indigeneity, ‘Voice’ and Colonial Citizenship.” *Junctures* 9: 67–80.",
+    description: "Argues that Indigenous communities, and ethnographers working with them, may refuse to make some knowledge available, and treats refusal as a political and analytical stance."
+  },
+  {
+    id: "WOS-104", type: "text", strand: "Refusal, listening, and sound", title: "Mohawk Interruptus: Political Life Across the Borders of Settler States", creator: "Audra Simpson",
+    year: "2014", region: "Global", coverage: "Kahnawà:ke", format: "Book", paths: ["method"], subjects: ["refusal", "nested sovereignty", "Mohawk"],
+    access: "purchase", url: "https://doi.org/10.1215/9780822376781", urlLabel: "DOI",
+    citation: "Simpson, Audra. 2014. *Mohawk Interruptus: Political Life Across the Borders of Settler States*. Durham, NC: Duke University Press.",
+    description: "An ethnography of Kahnawà:ke Mohawk political life that develops refusal and nested sovereignty as alternatives to seeking recognition from settler states."
   }
 ];
