@@ -1064,9 +1064,29 @@ main.wos nav.page-nav { margin-top: 28px; }
 .wos-clear:hover { text-decoration: underline; }
 .wos-status { font-family: var(--font-ui); font-size: 12.5px; color: var(--ink-soft); margin: 0 0 0 auto; }
 
-.wos-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 8px 0 12px; }
+.wos-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 8px 0 12px; }
 .wos-photos .field-photo { margin: 0; }
 .wos-photos .field-photo img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+
+ol.wos-fp { list-style: none; counter-reset: fp; margin: 8px 0 28px; padding: 0; display: grid; gap: 14px; }
+ol.wos-fp > li {
+  counter-increment: fp; position: relative; border: 1px solid var(--line); border-radius: 6px;
+  padding: 18px 20px 14px 64px; background: color-mix(in srgb, var(--off-white) 35%, transparent);
+}
+ol.wos-fp > li::before {
+  content: counter(fp, upper-roman); position: absolute; left: 20px; top: 16px;
+  font-family: var(--font-ui); font-size: 20px; color: var(--accent);
+}
+ol.wos-fp h4 { margin: 0 0 8px; font-size: 17px; }
+ol.wos-fp p { margin: 0 0 10px; max-width: 760px; }
+.wos-fp-test, .wos-fp-limit, .wos-fp-source { font-size: 0.93em; }
+.wos-fp-test span, .wos-fp-limit span, .wos-fp-source span {
+  display: inline-block; min-width: 9.5em; font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.wos-fp-test { border-left: 3px solid var(--accent); padding-left: 10px; }
+.wos-fp-source { color: var(--ink-soft); }
+@media (max-width: 600px) { ol.wos-fp > li { padding-left: 20px; padding-top: 44px; } }
 
 /* Records */
 .wos-records {
