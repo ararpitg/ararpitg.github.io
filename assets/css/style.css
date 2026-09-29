@@ -1005,7 +1005,7 @@ main.wos nav.page-nav { margin-top: 28px; }
 
 /* Catalog controls */
 .wos-controls {
-  position: sticky;
+  position: static;
   top: 70px;
   z-index: 20;
   background: var(--bg);
@@ -1049,6 +1049,13 @@ main.wos nav.page-nav { margin-top: 28px; }
 .wos-chip:hover { border-color: var(--ink-soft); }
 .wos-chip[aria-pressed="true"] { background: var(--dark); border-color: var(--dark); color: var(--off-white); }
 .wos-chip-count { opacity: 0.6; font-size: 11px; margin-left: 2px; }
+@media (min-height: 860px) and (min-width: 861px) {
+  .wos-controls { position: sticky; }
+}
+.wos-record, .wos-biblio li { scroll-margin-top: 140px; }
+@media (min-height: 860px) and (min-width: 861px) {
+  .wos-record { scroll-margin-top: 360px; }
+}
 .wos-controls-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 4px; }
 .wos-clear {
   font-family: var(--font-ui); font-size: 12.5px; background: none; border: none;
@@ -1070,7 +1077,6 @@ main.wos nav.page-nav { margin-top: 28px; }
   background: color-mix(in srgb, var(--off-white) 35%, transparent);
   display: flex;
   flex-direction: column;
-  scroll-margin-top: 220px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .wos-record:hover { border-color: var(--ink-soft); }
@@ -1145,7 +1151,6 @@ ol.wos-biblio li {
   padding: 12px 0 12px 22px;
   border-bottom: 1px solid var(--line);
   text-indent: -22px;
-  scroll-margin-top: 200px;
 }
 ol.wos-biblio li:target { background: color-mix(in srgb, var(--accent) 10%, transparent); }
 .wos-biblio .wos-annotation { display: block; text-indent: 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); margin-top: 6px; }

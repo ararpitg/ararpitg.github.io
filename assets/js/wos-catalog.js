@@ -5,6 +5,51 @@
   "use strict";
 
   var records = window.WOS_RECORDS || [];
+
+  // Citations mark titles with *asterisks*: shown as italics, copied as plain text.
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function citeHtml(s) { return esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>"); }
+
+  /* ---------- Readings: annotated bibliography, grouped by strand ---------- */
+  var readingsRoot = document.getElementById("wos-readings");
+  if (readingsRoot && records.length) {
+    var strands = [];
+    var byStrand = {};
+    records.forEach(function (r) {
+      if (r.type !== "text" || r.curator || !r.strand) return;
+      if (!byStrand[r.strand]) { byStrand[r.strand] = []; strands.push(r.strand); }
+      byStrand[r.strand].push(r);
+    });
+    var order = window.WOS_STRANDS || strands;
+    order.forEach(function (strand) {
+      var items = byStrand[strand];
+      if (!items) return;
+      items.sort(function (a, b) { return String(a.year).localeCompare(String(b.year)); });
+      var group = document.createElement("div");
+      group.className = "wos-biblio-group";
+      group.id = "strand-" + strand.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+      var h = document.createElement("h3");
+      h.textContent = strand;
+      group.appendChild(h);
+      var ol = document.createElement("ol");
+      ol.className = "wos-biblio";
+      items.forEach(function (r) {
+        var li = document.createElement("li");
+        li.id = "read-" + r.id;
+        var html = citeHtml(r.citation || r.title);
+        if (r.url) html += ' <a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.urlLabel || "Link") + " ↗</a>";
+        html += '<span class="wos-annotation">' + esc(r.description) +
+          ' <a href="#' + r.id + '">Catalog record ' + r.id + "</a></span>";
+        li.innerHTML = html;
+        ol.appendChild(li);
+      });
+      group.appendChild(ol);
+      readingsRoot.appendChild(group);
+    });
+  }
+
   var root = document.getElementById("wos-catalog");
   if (!root || !records.length) return;
 
@@ -53,7 +98,7 @@
     if (state.region && r.region !== state.region) return false;
     if (state.curator && !r.curator) return false;
     if (state.q) {
-      var hay = [r.title, r.creator, r.description, r.note, r.region, (r.subjects || []).join(" ")]
+      var hay = [r.title, r.creator, r.description, r.note, r.region, r.coverage, r.language, (r.subjects || []).join(" ")]
         .join(" ").toLowerCase();
       if (hay.indexOf(state.q) === -1) return false;
     }
@@ -161,7 +206,7 @@
 
     art.appendChild(el("h3", { class: "wos-record-title", text: r.title }));
     art.appendChild(el("p", { class: "wos-record-byline",
-      text: [r.creator, r.year, r.region].filter(Boolean).join(" · ") }));
+      text: [r.creator, r.year, r.coverage || r.region].filter(Boolean).join(" · ") }));
     art.appendChild(el("p", { class: "wos-record-desc", text: r.description }));
 
     var actions = el("div", { class: "wos-record-actions" });
@@ -184,7 +229,7 @@
     metaRow(dl, "Type", TYPE_LABELS[r.type]);
     metaRow(dl, "Format", r.format);
     metaRow(dl, "Language", r.language);
-    metaRow(dl, "Coverage", r.region);
+    metaRow(dl, "Coverage", r.coverage || r.region);
     metaRow(dl, "Paths", (r.paths || []).map(function (p) { return PATH_LABELS[p]; }).join("; "));
     metaRow(dl, "Subjects", (r.subjects || []).join("; "));
     metaRow(dl, "Access", ACCESS_LABELS[r.access] || r.access);
@@ -196,7 +241,8 @@
 
     var citeWrap = el("div", { class: "wos-cite" });
     citeWrap.appendChild(el("span", { class: "wos-cite-label", text: "Cite" }));
-    var citeText = el("p", { class: "wos-cite-text", text: citationFor(r) });
+    // Rendered with italics; the element's textContent is then plain text for copying.
+    var citeText = el("p", { class: "wos-cite-text", html: citeHtml(citationFor(r)) });
     citeWrap.appendChild(citeText);
     var copy = el("button", { type: "button", class: "wos-copy", text: "Copy citation" });
     copy.addEventListener("click", function () {
@@ -285,7 +331,7 @@
     var btn = target.querySelector(".wos-more");
     if (btn && btn.getAttribute("aria-expanded") === "false") btn.click();
     target.classList.add("is-highlight");
-    target.scrollIntoView({ block: "center" });
+    target.scrollIntoView({ block: "start" });
   }
   window.addEventListener("hashchange", openFromHash);
   openFromHash();
