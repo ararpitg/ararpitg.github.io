@@ -1483,3 +1483,30 @@ main.about .about-text h2 { margin-top: 0; padding-top: 0; border-top: 0; }
 
 /* The palette is designed as one scheme; ask browsers not to auto-darken it */
 :root { color-scheme: light only; }
+
+/* ---------- Bubble tabs (matching waysofseeing.in) ---------- */
+header.site-header nav.site-nav > ul { gap: 10px; align-items: center; }
+header.site-header nav.site-nav > ul > li > a {
+  display: inline-block; padding: 8px 16px; border-radius: 999px;
+  font-size: 13px; letter-spacing: 0.04em; text-transform: none;
+  color: var(--off-white); background: rgba(236, 229, 214, 0.07);
+  border: 1px solid rgba(236, 229, 214, 0.28);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+header.site-header nav.site-nav > ul > li > a:hover,
+header.site-header nav.site-nav > ul > li.has-dropdown:hover > a {
+  background: var(--off-white); color: var(--dark); border-color: var(--off-white); transform: translateY(-1px);
+}
+header.site-header nav.site-nav > ul > li > a[aria-current="page"] {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+  box-shadow: 0 4px 14px rgba(164, 80, 47, 0.35);
+}
+header.site-header nav.site-nav .dropdown { top: calc(100% + 2px); border-radius: 12px; overflow: hidden; }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header.site-header nav.site-nav > ul { gap: 7px; }
+  header.site-header nav.site-nav > ul > li > a { padding: 7px 12px; font-size: 12.5px; letter-spacing: 0.02em; }
+}
+@media (max-width: 760px) {
+  header.site-header nav.site-nav > ul { gap: 8px; }
+  header.site-header nav.site-nav > ul > li > a { padding: 7px 14px; font-size: 13px; }
+}
