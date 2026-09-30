@@ -182,10 +182,14 @@
     </div>
 
     <h2 id="podcast">Podcast</h2>
-    <div class="coming-soon">
+    <div class="coming-soon" id="podcast-soon">
       <span class="coming-soon-tag">Coming soon</span>
       <p>Conversations on media, archives, and the people who make them.</p>
     </div>
+    <div id="podcast-episodes" data-src="podcast/episodes.json"></div>
+    <p class="podcast-links" id="podcast-links" hidden>
+      Subscribe: <a href="podcast/feed.xml">RSS feed</a>
+    </p>
 
     <h2 id="audio">Multimedia &amp; Audio</h2>
     <ul class="plain">
@@ -239,5 +243,6 @@
 </footer>
 
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/podcast.js" defer></script>
 </body>
 </html>

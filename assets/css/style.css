@@ -1473,3 +1473,10 @@ main.home-main .wrap { max-width: 1120px; }
 .talks-photo { margin-top: 72px; }
 .about main h2, main.about .wrap > h2 { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--line); }
 main.about .about-text h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+
+/* Podcast episodes (Film & Media) */
+.podcast-episode { border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; margin-bottom: 16px;
+  background: color-mix(in srgb, var(--off-white) 35%, transparent); }
+.podcast-episode h3 { margin: 4px 0 8px; }
+.podcast-episode audio { width: 100%; margin-top: 6px; }
+.podcast-links { font-family: var(--font-ui); font-size: 14px; }

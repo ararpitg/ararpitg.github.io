@@ -1,0 +1,17 @@
+{
+  "show": {
+    "title": "",
+    "description": "",
+    "author": "Arpit Gaind",
+    "owner_name": "Arpit Gaind",
+    "owner_email": "contact@arpitgaind.com",
+    "language": "en",
+    "category": "Society & Culture",
+    "subcategory": "Documentary",
+    "explicit": false,
+    "cover": "",
+    "site": "https://arpitgaind.com/film.html#podcast",
+    "feed": "https://arpitgaind.com/podcast/feed.xml"
+  },
+  "episodes": []
+}
