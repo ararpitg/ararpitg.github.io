@@ -1480,3 +1480,6 @@ main.about .about-text h2 { margin-top: 0; padding-top: 0; border-top: 0; }
 .podcast-episode h3 { margin: 4px 0 8px; }
 .podcast-episode audio { width: 100%; margin-top: 6px; }
 .podcast-links { font-family: var(--font-ui); font-size: 14px; }
+
+/* The palette is designed as one scheme; ask browsers not to auto-darken it */
+:root { color-scheme: light only; }
