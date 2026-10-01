@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Counter-Mapping — Arpit Gaind</title>
+<meta name="description" content="Counter-Mapping: maps, the counter-archive, and Indigenous duration in Adivasi Jharkhand. An interactive district map from Census and Forest Survey data, and a digital humanities project by Arpit Gaind.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="site-title" aria-label="Arpit Gaind, home">A<span class="divider"></span>G</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown"><a href="about.html">About</a>
+          <ul class="dropdown">
+            <li><a href="about.html#bio">Bio</a></li>
+            <li><a href="about.html#glance">At a Glance</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="research.html">Research</a>
+          <ul class="dropdown">
+            <li><a href="research.html#overview">Overview</a></li>
+            <li><a href="research.html#dissertation">Dissertation</a></li>
+            <li><a href="research.html#interests">Interests</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="teaching.html">Teaching</a>
+          <ul class="dropdown">
+            <li><a href="teaching.html#overview">Overview</a></li>
+            <li><a href="teaching.html#experience">Experience</a></li>
+            <li><a href="teaching.html#philosophy">Philosophy</a></li>
+            <li><a href="teaching.html#evaluations">Evaluations</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="writing.html">Writing &amp; Talks</a>
+          <ul class="dropdown">
+            <li><a href="writing.html#articles">Articles</a></li>
+            <li><a href="writing.html#chapters">Book Chapters</a></li>
+            <li><a href="writing.html#multimedia">Multimedia</a></li>
+            <li><a href="writing.html#editorial">Editorial Work</a></li>
+            <li><a href="writing.html#talks">Talks</a></li>
+            <li><a href="writing.html#organizing">Organizing</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="media.html" aria-current="page">Digital Humanities</a>
+          <ul class="dropdown">
+            <li><a href="media.html#overview">Overview</a></li>
+            <li><a href="https://waysofseeing.in/">Ways of Seeing &#8599;</a></li>
+            <li><a href="counter-mapping.html">Counter-Mapping</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="film.html">Film &amp; Media</a>
+          <ul class="dropdown">
+            <li><a href="film.html#films">Films</a></li>
+            <li><a href="film.html#photography">Photography</a></li>
+            <li><a href="film.html#blog">Blog</a></li>
+            <li><a href="film.html#podcast">Podcast</a></li>
+            <li><a href="film.html#audio">Audio</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="awards.html">Awards</a>
+          <ul class="dropdown">
+            <li><a href="awards.html#featured">Featured</a></li>
+            <li><a href="awards.html#external">External &amp; International</a></li>
+            <li><a href="awards.html#university">University</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wide cm">
+  <div class="wrap">
+    <p class="cm-eyebrow">Digital Humanities &middot; 2026</p>
+    <h1>Counter-Mapping</h1>
+    <p class="cm-lede">
+      <em>Infrastructures of Visibility</em>: counter-mapping, the counter-archive, and Indigenous duration in
+      Adivasi spaces.
+    </p>
+
+    <nav class="page-nav" aria-label="On this page">
+      <ul>
+        <li><a href="#question">Question</a></li>
+        <li><a href="#instruments">Maps as Instruments</a></li>
+        <li><a href="#terrain">The Terrain the State Counts</a></li>
+        <li><a href="#counter">Counter-Mapping</a></li>
+        <li><a href="#montage">Montage</a></li>
+        <li><a href="#akhra">A Digital Akhra</a></li>
+        <li><a href="#ethics">Why District Level</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+    </nav>
+
+    <h2 id="question">The Question</h2>
+    <p>
+      If the state maps Adivasi land in order to turn it into data &mdash; parcels to be listed, leased, and
+      auctioned &mdash; how might a counter-map make Indigenous spatial knowledge visible without exposing it to the
+      same gaze? This project began in <em>Data and Society</em> (DH 221) with Dr. Nour Joudah at UCLA in Winter
+      2026, as a methodological fork from my dissertation: a move from the cinematic frame to the spatial database,
+      and from studying Adivasi media to imagining the infrastructure it might need.
+    </p>
+    <p>
+      What follows is a working account. One map is built from public, district-level data; the other is a sketch,
+      labelled as one. The project deliberately stops short of a populated database of villages, groves, and
+      boundaries, for reasons set out <a href="#ethics">below</a>.
+    </p>
+
+    <h2 id="instruments">Maps as Instruments</h2>
+    <p>
+      Maps are never neutral records; J. B. Harley called them exercises in power. On the Chotanagpur plateau that
+      power has a long paper trail. The Permanent Settlement of 1793 tied land to revenue through intermediary
+      landlords. In 1832 colonial officials demarcated the <em>Damin-i-koh</em> in the Rajmahal hills with masonry
+      pillars, and the debt, moneylending, and land alienation that followed fed the Santal Hul of 1855. Later law
+      recorded, and so protected, some customary tenures: the Chota Nagpur Tenancy Act of 1908 defines the Mundari
+      <em>khuntkatti</em> right of those who first cleared the forest.
+    </p>
+    <p>
+      The datafication continues. In 2016 Jharkhand&rsquo;s Revenue, Registration and Land Reforms Department built
+      a Land Bank listing about 2.1 million acres of &ldquo;government&rdquo; land for investors. Nearly half of it
+      was forest, and it took in <em>gair-majarua</em> village commons, <em>sarna</em> sacred groves, and
+      <em>khuntkatti</em> land. The same plateau carries the industrial belt that Loha Garam Hai documents: by
+      2009&ndash;10 Odisha alone had 108 sponge iron plants, most of them in Sundargarh and Keonjhar, and Jharkhand
+      about forty.
+    </p>
+
+    <h2 id="terrain">The Terrain the State Counts</h2>
+    <p>
+      A map built only from official, public figures, read against itself. Each district shows its Scheduled Tribe
+      population (Census 2011) or its forest cover (Forest Survey of India, 2023); the outline marks districts that
+      are Scheduled Areas under the Fifth Schedule. Click a district for its figures.
+    </p>
+    <div class="cm-controls" role="group" aria-label="Map layers">
+      <button type="button" class="cm-btn" data-cm-layer="st" aria-pressed="true">Scheduled Tribe share</button>
+      <button type="button" class="cm-btn" data-cm-layer="forest" aria-pressed="false">Forest cover</button>
+      <button type="button" class="cm-btn" data-cm-layer="scheduled" aria-pressed="false">Fifth Schedule areas</button>
+    </div>
+    <div class="cm-map-wrap">
+      <div id="cm-map" class="cm-map" data-src="assets/data/jharkhand-districts.geojson" role="region" aria-label="Interactive map of Jharkhand's districts"></div>
+      <p id="cm-info" class="cm-info" aria-live="polite">Click a district.</p>
+    </div>
+    <p>
+      Read together, the layers show how the state&rsquo;s own categories line up. Every one of the thirteen
+      districts where Scheduled Tribes make up more than about a quarter of the population is fully a Scheduled
+      Area, from Khunti (73 per cent) to Sahibganj (27 per cent); Godda, Garhwa, and Palamu are scheduled in part.
+      The forest does not follow the same lines: Chatra and Hazaribagh are among the most forested districts in the
+      state and are not Scheduled Areas at all.
+    </p>
+    <p class="cm-sources-inline">
+      Data: Census of India 2011, Primary Census Abstract; Forest Survey of India, <em>India State of Forest Report
+      2023</em>, Vol. II, Table 10.11.3; Ministry of Tribal Affairs, <em>Statistical Profile of Scheduled Tribes in
+      India</em> (2013), list of Fifth Schedule Areas, citing the Scheduled Areas (State of Jharkhand) Order, 2007.
+      Khunti was carved from Ranchi district, which is fully scheduled, after that Order. District boundaries:
+      DataMeet, <em>India &ndash; District Map (Census 2011)</em>, CC BY 2.5 India, simplified.
+    </p>
+
+    <h2 id="counter">Counter-Mapping</h2>
+    <p>
+      Nancy Lee Peluso named the practice in 1995: communities taking up the state&rsquo;s own cartographic tools to
+      assert claims the official map erases. In India the Forest Rights Act of 2006 made a version of it legal
+      procedure. To claim community forest resource rights, gram sabhas map their customary boundaries with elders
+      and neighbouring villages, often with GPS. Counter-mapping can also be carved in stone. From 2017, villages in
+      Khunti raised <em>pathalgadi</em> slabs at their entrances, drawing on the custom of memorial stones and
+      inscribing them with Fifth Schedule provisions and claims of gram sabha self-rule. The state answered with
+      cases naming more than ten thousand people for sedition; in December 2019 a new government decided to
+      withdraw them.
+    </p>
+    <p>
+      Elsewhere, the practice has taken other forms: the Zuni map art project, where artists painted their homelands
+      as story and relation rather than measured distance, and Irakli Sabekia&rsquo;s <em>Archive of Spatial
+      Knowledge</em>, a platform of censored narratives from the occupied regions of Georgia.
+    </p>
+
+    <h2 id="montage">Montage</h2>
+    <p>
+      A sketch of the counter-map&rsquo;s logic, not a map of any place: layers of seeing laid over one another.
+      Switch them on and off.
+    </p>
+    <div class="cm-controls" role="group" aria-label="Montage layers">
+      <button type="button" class="cm-btn" data-montage="grid" aria-pressed="true">Colonial survey grid</button>
+      <button type="button" class="cm-btn" data-montage="parcels" aria-pressed="true">Land Bank parcels</button>
+      <button type="button" class="cm-btn" data-montage="relations" aria-pressed="true">Community relations</button>
+    </div>
+    <figure class="cm-montage">
+      <svg viewBox="0 0 800 420" role="img" aria-labelledby="montage-title montage-desc">
+        <title id="montage-title">Schematic montage of three ways of seeing land</title>
+        <desc id="montage-desc">An abstract diagram, not a map of any real place. A rectilinear survey grid, a set of
+        angular parcels labelled for listing, and a web of community relations linking a grove, a river, an akhra,
+        and fields by paths and songs.</desc>
+        <rect width="800" height="420" fill="#e6dcc8"/>
+        <path d="M0 300 C120 270 220 330 360 300 S600 240 800 280" fill="none" stroke="#9fb7b0" stroke-width="10" opacity="0.7"/>
+        <g data-layer="grid" stroke="#5c5346" stroke-width="1" opacity="0.55">
+          <path d="M80 0V420M160 0V420M240 0V420M320 0V420M400 0V420M480 0V420M560 0V420M640 0V420M720 0V420" />
+          <path d="M0 70H800M0 140H800M0 210H800M0 280H800M0 350H800" />
+          <text x="12" y="20" font-family="Jost, sans-serif" font-size="12" fill="#5c5346">Survey grid</text>
+        </g>
+        <g data-layer="parcels" fill="#a4502f" fill-opacity="0.18" stroke="#a4502f" stroke-width="2">
+          <path d="M100 60 L250 50 L270 160 L120 175 Z"/>
+          <path d="M430 90 L600 80 L620 200 L450 215 Z"/>
+          <path d="M520 250 L700 240 L690 360 L540 370 Z"/>
+          <text x="440" y="110" font-family="Jost, sans-serif" font-size="12" fill="#7a3520" stroke="none">Listed: &ldquo;government land&rdquo;</text>
+        </g>
+        <g data-layer="relations" font-family="Jost, sans-serif" font-size="13" fill="#262422">
+          <path d="M170 110 C250 200 320 220 400 230 S560 200 600 140" fill="none" stroke="#2f5530" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <path d="M400 230 C420 280 520 300 610 305" fill="none" stroke="#2f5530" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <circle cx="170" cy="110" r="16" fill="#4f7a45"/><text x="192" y="104">Grove</text>
+          <circle cx="400" cy="230" r="18" fill="#262422"/><text x="424" y="236">Akhra</text>
+          <circle cx="600" cy="140" r="14" fill="#4f7a45"/><text x="620" y="136">Fields</text>
+          <circle cx="610" cy="305" r="14" fill="#7a9f63"/><text x="630" y="301">River</text>
+          <text x="250" y="190" font-size="12" fill="#2f5530">path, song, memory</text>
+        </g>
+      </svg>
+      <figcaption>Schematic only. It shows a way of reading, not the location of any village, grove, or boundary.</figcaption>
+    </figure>
+
+    <h2 id="akhra">A Digital Akhra</h2>
+    <p>
+      The <em>akhra</em> is the village gathering ground: a place of dance, song, and deliberation, held together as
+      much by sound and rhythm as by any boundary. A spatial archive worthy of the name would have to keep that
+      quality. It would draw on Nour Joudah&rsquo;s idea of Indigenous duration &mdash; time as continuity and
+      creative growth rather than a story of loss &mdash; and on Steven Feld&rsquo;s acoustemology, knowing place
+      through sound, while refusing what Dylan Robinson calls hungry listening. In such an archive a hard drive could
+      work like a <em>sasandiri</em>, the Mundari memorial stone that marks a clan&rsquo;s belonging to its land:
+      evidence held by the community, not surrendered to a platform.
+    </p>
+    <p>
+      The practice already exists in film. With AKHRA in Ranchi, production moves in a cycle that I sketch from
+      fieldwork as three phases:
+    </p>
+    <ol class="cm-cycle">
+      <li><strong>Sangharsh</strong> <span>Struggle</span><p>Films made as evidence against displacement and pollution, such as <a href="https://waysofseeing.in/catalog.html#WOS-108"><em>Loha Garam Hai</em></a>.</p></li>
+      <li><strong>Nirman</strong> <span>Construction</span><p>Films that keep culture and memory, such as <a href="https://waysofseeing.in/catalog.html#WOS-024"><em>Naachi Se Baanchi</em></a>.</p></li>
+      <li><strong>Pedagogy</strong> <span>Teaching</span><p>Workshops that train the next generation of filmmakers, who return to the first phase.</p></li>
+    </ol>
+    <p class="cm-sources-inline">Author&rsquo;s elaboration from fieldwork at AKHRA, Ranchi.</p>
+    <figure class="field-photo cm-photo">
+      <img src="assets/img/khunti-screening.jpg" alt="An outdoor night screening: villagers seated and standing on open ground facing a lit screen" loading="lazy">
+      <figcaption>An outdoor film screening in Khunti. From Akhra Ranchi&rsquo;s archive. Shown with AKHRA&rsquo;s permission.</figcaption>
+    </figure>
+
+    <h2 id="ethics">Why District Level</h2>
+    <p>
+      The impulse to plot Indigenous knowledge onto a digital map can itself violate data sovereignty and expose
+      communities to surveillance. So the only map here built from data stays at the scale of the district, using
+      figures the state already publishes. No village, grove, burial ground, or boundary is located, and none will
+      be without the community&rsquo;s decision. The same commitments govern
+      <a href="https://waysofseeing.in/principles.html">Ways of Seeing&rsquo;s First Principles</a>, which this
+      project shares.
+    </p>
+    <p>
+      Developed in DH 221 at UCLA and in papers for the CISA works-in-progress panel at UCLA, the Global Asia
+      Conference at UC Irvine, and the Association for Asian Studies annual conference in Vancouver, 2026.
+    </p>
+
+    <h2 id="sources">Sources</h2>
+    <ul class="cm-refs">
+      <li>Andersen, Peter B. 2022. <em>The Santal Rebellion 1855&ndash;1856: The Call of &#7788;h&#7841;kur</em>. London: Routledge India. <a href="https://doi.org/10.4324/b23196" target="_blank" rel="noopener">DOI</a></li>
+      <li>Anusha, Chandana. 2023. &ldquo;Making Individual Claims Under the Forest Rights Act, 2006: Clarifying and Defining Adivasi Lands.&rdquo; <em>Contributions to Indian Sociology</em> 57 (3): 276&ndash;303. <a href="https://doi.org/10.1177/00699659231219308" target="_blank" rel="noopener">DOI</a></li>
+      <li>Bhushan, Chandra, and Sugandh Juneja. 2011. <em>Sponge Iron Industry: The Regulatory Challenge</em>. New Delhi: Centre for Science and Environment. <a href="https://cdn.cseindia.org/attachments/0.25223700_1499927364_sponge_iron_layout.pdf" target="_blank" rel="noopener">PDF</a></li>
+      <li>Enote, Jim, and Jennifer McLerran, eds. 2011. <em>A:shiwi A:wan Ulohnanne: The Zuni World</em>. Zuni, NM: A:shiwi A:wan Museum and Heritage Center; Flagstaff: Museum of Northern Arizona.</li>
+      <li>Feld, Steven. 1996. &ldquo;Waterfalls of Song: An Acoustemology of Place Resounding in Bosavi, Papua New Guinea.&rdquo; In <em>Senses of Place</em>, edited by Steven Feld and Keith H. Basso, 91&ndash;135. Santa Fe: School of American Research Press.</li>
+      <li>Forest Survey of India. 2024. <em>India State of Forest Report 2023</em>, Vol. II, Table 10.11.3. <a href="https://fsi.nic.in/forest-report-2023" target="_blank" rel="noopener">Link</a></li>
+      <li>Guha, Ranajit. 1983. <em>Elementary Aspects of Peasant Insurgency in Colonial India</em>. Delhi: Oxford University Press.</li>
+      <li>Harley, J. B. 1989. &ldquo;Deconstructing the Map.&rdquo; <em>Cartographica</em> 26 (2): 1&ndash;20. <a href="https://doi.org/10.3138/E635-7827-1757-9T53" target="_blank" rel="noopener">DOI</a></li>
+      <li>Hassan, Mahmodul. 2024. &ldquo;Jharkhand&rsquo;s Controversial Land Bank Is Undermining Rights of Marginalised.&rdquo; <em>Maktoob Media</em>, November 17. <a href="https://maktoobmedia.com/india/jharkhands-controversial-land-bank-is-undermining-rights-of-marginalised/" target="_blank" rel="noopener">Link</a></li>
+      <li>Joudah, Nour. 2022. &ldquo;Mapping Decolonized Futures: Indigenous Visions for Palestine and Hawai&#699;i.&rdquo; PhD diss., University of California, Los Angeles. <a href="https://escholarship.org/uc/item/1q13d9zh" target="_blank" rel="noopener">eScholarship</a></li>
+      <li>Ministry of Tribal Affairs. 2013. <em>Statistical Profile of Scheduled Tribes in India</em>. New Delhi: Government of India. <a href="https://tribal.nic.in/downloads/Statistics/StatisticalProfileofSTs2013.pdf" target="_blank" rel="noopener">PDF</a></li>
+      <li>Office of the Registrar General &amp; Census Commissioner, India. 2011. <em>Census of India 2011: Primary Census Abstract</em>. <a href="https://censusindia.gov.in/nada/index.php/catalog/6191" target="_blank" rel="noopener">Link</a></li>
+      <li>Peluso, Nancy Lee. 1995. &ldquo;Whose Woods Are These? Counter-Mapping Forest Territories in Kalimantan, Indonesia.&rdquo; <em>Antipode</em> 27 (4): 383&ndash;406. <a href="https://doi.org/10.1111/j.1467-8330.1995.tb00286.x" target="_blank" rel="noopener">DOI</a></li>
+      <li>Robinson, Dylan. 2020. <em>Hungry Listening: Resonant Theory for Indigenous Sound Studies</em>. Minneapolis: University of Minnesota Press.</li>
+      <li>Sabekia, Irakli. 2022. <em>Archive of Spatial Knowledge</em>. <a href="https://archive-of-spatial-knowledge.org/" target="_blank" rel="noopener">Link</a></li>
+      <li>Scroll Staff. 2019. &ldquo;Jharkhand: Hemant Soren-Led JMM Government Drops All Cases Filed Against Pathalgadi Supporters.&rdquo; <em>Scroll</em>, December 29. <a href="https://scroll.in/latest/948222/jharkhand-pathalgadi-sedition-cases-dropped-by-hemant-soren-government" target="_blank" rel="noopener">Link</a></li>
+      <li>Sharma, Supriya. 2019. &ldquo;10,000 People Charged with Sedition in One Jharkhand District. What Does Democracy Mean Here?&rdquo; <em>Scroll</em>, November 19. <a href="https://scroll.in/article/944116/10000-people-charged-with-sedition-in-one-jharkhand-district-what-does-democracy-mean-here" target="_blank" rel="noopener">Link</a></li>
+      <li>Sushmita. 2022. &ldquo;Jharkhand: How the State Is Dispossessing Villagers of Their Forest Rights by Subverting Land Laws.&rdquo; <em>Scroll</em>, July 26. <a href="https://scroll.in/article/1029011/in-jharkhand-villagers-are-being-dispossessed-through-subversion-of-land-laws" target="_blank" rel="noopener">Link</a></li>
+      <li>Wood, Denis, with John Fels and John Krygier. 2010. <em>Rethinking the Power of Maps</em>. New York: Guilford Press.</li>
+      <li>Zumbish, and Shuchita Jha. 2022. &ldquo;Taking Ownership: How Forest-Dwellers in Chhattisgarh, Odisha Claimed Rights over Traditional Boundary.&rdquo; <em>Down To Earth</em>, August 29. <a href="https://www.downtoearth.org.in/forests/taking-ownership-how-forest-dwellers-in-chhattisgarh-odisha-claimed-rights-over-traditional-boundary-84596" target="_blank" rel="noopener">Link</a></li>
+    </ul>
+    <p class="cm-sources-inline">District boundaries &copy; DataMeet India community, CC BY 2.5 India. Map figures are the published district statistics of the Census of India and the Forest Survey of India.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="index.html" class="footer-logo" aria-label="Arpit Gaind, home">A<span class="divider"></span>G</a>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="about.html">About</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="research.html">Research</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="writing.html">Writing &amp; Talks</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="media.html">Digital Humanities</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="film.html">Film &amp; Media</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="awards.html">Awards</a></li>
+        <li aria-hidden="true">&mdash;</li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-social">
+      <a href="https://scholar.google.com/citations?hl=en&user=3nvxHzgAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6L21 9 12 3Zm0 2.31L17.82 9 12 12.69 6.18 9 12 5.31ZM7 12.4l4 2.18v4.24l-4-2.18V12.4Zm10 0v4.24l-4 2.18v-4.24l4-2.18Z"/></svg>
+      </a>
+      <a href="https://orcid.org/0000-0002-4919-0170" target="_blank" rel="noopener" aria-label="ORCID">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-2.6 5.1c.6 0 1.08.48 1.08 1.07 0 .6-.48 1.08-1.08 1.08-.59 0-1.07-.48-1.07-1.08 0-.59.48-1.07 1.07-1.07ZM8.53 9.9h1.7v8.03h-1.7V9.9Zm3.42 0h3.1c2.95 0 4.25 2.11 4.25 4.02 0 2.08-1.63 4.02-4.22 4.02h-3.13V9.9Zm1.7 1.46v5.1h1.28c1.83 0 2.62-1.35 2.62-2.56 0-1.39-.86-2.54-2.64-2.54h-1.26Z"/></svg>
+      </a>
+      <a href="https://vimeo.com/arpitgaind" target="_blank" rel="noopener" aria-label="Vimeo">
+        <svg viewBox="0 0 24 24"><path d="M22 7.4c-.09 2-1.49 4.74-4.19 8.21-2.79 3.63-5.15 5.44-7.07 5.44-1.19 0-2.2-1.1-3.02-3.3L6.1 12.2C5.46 9.99 4.78 8.89 4.05 8.89c-.16 0-.72.34-1.68 1.01L1.4 8.61c1.06-.93 2.1-1.87 3.13-2.8C5.94 4.4 7.09 3.7 7.85 3.63c1.79-.17 2.89 1.05 3.3 3.68.44 2.83.75 4.59.92 5.27.51 2.32 1.07 3.48 1.68 3.48.47 0 1.19-.75 2.14-2.24.95-1.5 1.46-2.63 1.53-3.42.14-1.29-.37-1.94-1.53-1.94-.55 0-1.11.13-1.69.38 1.12-3.68 3.27-5.47 6.42-5.37C21.6 3.55 22.15 4.9 22 7.4Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/mirrorandlenses/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.13 1.38-.66.67-1.07 1.34-1.38 2.13-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13-.67-.66-1.34-1.07-2.13-1.38-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/arpit-gaind-6a46b01b5" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="assets/js/counter-map.js" defer></script>
+</body>
+</html>
