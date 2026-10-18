@@ -1510,3 +1510,19 @@ header.site-header nav.site-nav .dropdown { top: calc(100% + 2px); border-radius
   header.site-header nav.site-nav > ul { gap: 8px; }
   header.site-header nav.site-nav > ul > li > a { padding: 7px 14px; font-size: 13px; }
 }
+
+/* ---------- Blog ---------- */
+.blog-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.blog-list li { padding: 18px 0; border-top: 1px solid var(--line); }
+.blog-list-title { font-family: var(--font-ui); font-size: 19px; font-weight: 500; color: var(--ink); text-decoration: none; }
+.blog-list-title:hover { color: var(--accent); }
+.blog-list .meta { display: block; margin: 4px 0 8px; }
+.blog-list p { margin: 0; }
+.blog-post .wrap { max-width: 720px; }
+.blog-crumb { font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.blog-post h1 { font-size: 30px; line-height: 1.25; }
+.blog-source { font-size: 14.5px; color: var(--ink-soft); border-left: 3px solid var(--accent); padding-left: 14px; margin: 18px 0 28px; }
+.blog-post h2 { font-size: 21px; }
+.blog-post sup a { text-decoration: none; font-size: 0.75em; }
+.blog-ref, .blog-note { font-size: 14.5px; padding-left: 24px; text-indent: -24px; overflow-wrap: anywhere; }
+.blog-note .note-back { text-decoration: none; }
