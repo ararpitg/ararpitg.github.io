@@ -158,4 +158,29 @@
     box.appendChild(frame);
     link.parentNode.replaceChild(box, link);
   });
+
+  /* ---------- Videos hosted as a plain MP4 elsewhere (e.g. UCLA): click a still to play it in place ---------- */
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest ? e.target.closest("a[data-mp4]") : null;
+    if (!link) return;
+    e.preventDefault();
+    var box = document.createElement("div");
+    box.className = "film-embed";
+    var video = document.createElement("video");
+    video.src = link.getAttribute("data-mp4");
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.preload = "auto";
+    var still = link.querySelector("img");
+    if (still) video.poster = still.getAttribute("src");
+    video.setAttribute("aria-label", link.getAttribute("aria-label") || "Video player");
+    /* If the host ever moves the file, put the still back and send clicks to the page the link points to */
+    video.addEventListener("error", function () {
+      link.removeAttribute("data-mp4");
+      if (box.parentNode) box.parentNode.replaceChild(link, box);
+    });
+    box.appendChild(video);
+    link.parentNode.replaceChild(box, link);
+  });
 })();
