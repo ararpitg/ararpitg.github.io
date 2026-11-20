@@ -1486,6 +1486,17 @@ main.about .about-text h2 { margin-top: 0; padding-top: 0; border-top: 0; }
 .podcast-episode h3 { margin: 4px 0 8px; }
 .podcast-episode audio { width: 100%; margin-top: 6px; }
 .podcast-links { font-family: var(--font-ui); font-size: 14px; }
+.podcast-art { float: right; width: 132px; height: 132px; margin: 0 0 12px 18px; border-radius: 6px; object-fit: cover; }
+.podcast-note { color: var(--ink-soft); font-size: 0.95em; }
+.podcast-credits { clear: both; color: var(--ink-soft); font-family: var(--font-ui); font-size: 13px; margin-bottom: 0; }
+.podcast-chapters { margin: 12px 0; font-family: var(--font-ui); font-size: 14px; }
+.podcast-chapters summary { cursor: pointer; color: var(--accent); }
+.podcast-chapters ol { list-style: none; padding: 0; margin: 8px 0 0; }
+.podcast-chapters li { margin: 4px 0; display: flex; gap: 0.6em; }
+.podcast-chapters button { font: inherit; font-variant-numeric: tabular-nums; color: var(--accent); background: none;
+  border: 0; padding: 0; cursor: pointer; min-width: 3.4em; text-align: left; flex: none; }
+.podcast-chapters button:hover { text-decoration: underline; }
+@media (max-width: 560px) { .podcast-art { width: 88px; height: 88px; } }
 
 /* The palette is designed as one scheme; ask browsers not to auto-darken it */
 :root { color-scheme: light only; }

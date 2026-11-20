@@ -1,7 +1,7 @@
 {
   "show": {
-    "title": "",
-    "description": "",
+    "title": "Ways of Seeing: Conversations",
+    "description": "Conversations on archives, South Asia, and Indigenous media, hosted by Arpit Gaind, a doctoral candidate in World Arts and Cultures at UCLA. A companion to Ways of Seeing, an Adivasi media archive (waysofseeing.in), the series talks with scholars, archivists, and media makers about who keeps the record, and on whose terms.",
     "author": "Arpit Gaind",
     "owner_name": "Arpit Gaind",
     "owner_email": "contact@arpitgaind.com",
@@ -9,9 +9,83 @@
     "category": "Society & Culture",
     "subcategory": "Documentary",
     "explicit": false,
-    "cover": "",
+    "cover": "https://arpitgaind.com/podcast/art/series-cover.jpg",
     "site": "https://arpitgaind.com/film.html#podcast",
     "feed": "https://arpitgaind.com/podcast/feed.xml"
   },
-  "episodes": []
+  "episodes": [
+    {
+      "number": 1,
+      "title": "In Conversation with Michelle Caswell: Community Archives, SAADA, and Liberatory Memory Work",
+      "date": "",
+      "audio": "",
+      "description": "Arpit Gaind speaks with Michelle Caswell, Professor of Archival Studies at UCLA, about community archives, co-founding SAADA, and the move from representation to liberation. Recorded March 2022.",
+      "notes": "In this conversation, Arpit Gaind speaks with Michelle Caswell, Professor of Archival Studies in UCLA's Department of Information Studies and director of the Community Archives Lab. Caswell traces her path from religious studies into archival studies, explains how archival studies differs from library and information studies, and describes the Lab's work with independent, identity-based community archives. She reflects on co-founding the South Asian American Digital Archive (SAADA) in 2008, on working as an outsider to the communities these archives serve, on the argument of Urgent Archives that representation must lead to liberation, on what digitization does and does not make possible, and on mutual aid as the future of community archives.\n\nA note on timing: this conversation was recorded in March 2022. Professor Caswell's work, and the field around it, have continued to move since then, so please listen to it as a record of where these questions stood at that moment.",
+      "chapters": [
+        [
+          0,
+          "Introduction"
+        ],
+        [
+          85,
+          "Caswell's path into archival studies"
+        ],
+        [
+          475,
+          "Library, information, and archival studies"
+        ],
+        [
+          739,
+          "A changing field and its social-justice turn"
+        ],
+        [
+          857,
+          "Practice and the Community Archives Lab"
+        ],
+        [
+          1263,
+          "Community-based and community-driven archives"
+        ],
+        [
+          1448,
+          "Founding SAADA"
+        ],
+        [
+          1800,
+          "Positionality: working as an outsider"
+        ],
+        [
+          2070,
+          "Urgent Archives: from representation to liberation"
+        ],
+        [
+          2409,
+          "Digital and physical archives"
+        ],
+        [
+          2668,
+          "The future: mutual aid among community archives"
+        ],
+        [
+          2882,
+          "Closing"
+        ]
+      ],
+      "links": [
+        [
+          "UCLA Community Archives Lab",
+          "https://communityarchiveslab.ucla.edu/"
+        ],
+        [
+          "South Asian American Digital Archive (SAADA)",
+          "https://www.saada.org"
+        ]
+      ],
+      "credits": "Host and producer: Arpit Gaind. Guest: Michelle Caswell. Music: original theme composed for this episode (FluidR3 GM soundfont, MIT licence). Images courtesy of Michelle Caswell and the UCLA Community Archives Lab.",
+      "image": "https://arpitgaind.com/podcast/art/ep01-caswell.jpg",
+      "transcript": "https://arpitgaind.com/podcast/transcripts/ep01-caswell.txt",
+      "captions": "https://arpitgaind.com/podcast/transcripts/ep01-caswell.srt",
+      "youtube": ""
+    }
+  ]
 }
